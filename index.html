@@ -34,11 +34,15 @@
   .url{ font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:var(--soft); }
   .navcta{ font-size:12px; letter-spacing:.16em; text-transform:uppercase; color:var(--paper); background:var(--ink); padding:11px 18px; text-decoration:none; }
   .navcta:hover{ background:var(--accent); }
-  .hero{ padding:96px 0 84px; border-bottom:1px solid var(--line); }
+  .hero{ padding:100px 0 88px; border-bottom:1px solid var(--line); text-align:center; }
   .eyebrow{ font-size:12px; letter-spacing:.34em; text-transform:uppercase; color:var(--accent); }
-  .hero h1{ font-family:var(--serif); font-weight:600; font-size:clamp(40px,6.6vw,76px); line-height:1.03; margin:22px 0 0; max-width:15ch; }
-  .hero h1 em{ font-style:italic; font-weight:500; }
-  .hero p{ font-size:18px; color:var(--soft); line-height:1.65; max-width:56ch; margin-top:24px; }
+  .brandhero{ font-family:var(--serif); font-weight:600; font-size:clamp(62px,12vw,132px); line-height:1; letter-spacing:.01em; margin:18px 0 0; color:var(--ink); }
+  .defn{ font-family:var(--serif); font-style:italic; font-size:clamp(17px,2.3vw,23px); color:var(--soft); margin-top:14px; }
+  .defn b{ font-style:normal; color:var(--ink); letter-spacing:.03em; }
+  .herosub{ font-size:18px; color:var(--ink); line-height:1.6; max-width:52ch; margin:26px auto 0; }
+  .brandline{ margin-top:24px; font-size:13px; letter-spacing:.26em; text-transform:uppercase; color:var(--soft); }
+  .brandline b{ color:var(--accent); font-weight:600; }
+  .hero .row{ justify-content:center; }
   .row{ display:flex; gap:16px; align-items:center; margin-top:36px; flex-wrap:wrap; }
   .btn{ font-size:13px; letter-spacing:.14em; text-transform:uppercase; text-decoration:none; padding:15px 28px; display:inline-block; }
   .btn-dark{ background:var(--ink); color:var(--paper); } .btn-dark:hover{ background:var(--accent); }
@@ -111,10 +115,11 @@
 
 <header class="hero"><div class="wrap">
   <div class="eyebrow">Private College Counseling &amp; Application Advisory</div>
-  <h1 class="serif">The strongest application is the one that is most <em>truly your child's.</em></h1>
-  <p>Quintessence helps your child discover, cultivate, and communicate the deepest essence of who they are — and
-     turn it into an application that is unmistakably theirs. We believe the most strategic story and the most
-     authentic one are the same story. From first strategy to final submission, in their own voice.</p>
+  <div class="brandhero serif">Quintessence</div>
+  <p class="defn"><b>quin·tes·sence</b> <i>(n.)</i> — the fifth and purest essence; the truest expression of what something is.</p>
+  <p class="herosub">We help your child discover who they truly are — and turn it into an application that is
+     unmistakably theirs. The most strategic story and the most authentic one are the same story.</p>
+  <div class="brandline"><b>QI</b> &nbsp;·&nbsp; qiadmissions.com</div>
   <div class="row">
     <a class="btn btn-dark" href="#rsvp">Join the free info session · July 12</a>
     <a class="btn btn-ghost" href="#process">See how it works</a>
@@ -123,11 +128,10 @@
 
 <section class="philo" id="philosophy"><div class="wrap">
   <div class="lab">The philosophy</div>
-  <p class="big"><b>Quintessence</b> — the fifth essence. The ancients held that beyond earth, water, air, and fire
-    lay a fifth, purest element. The whole of our work is to help a student discover, cultivate, and communicate the
-    <b>deepest essence of who they are.</b> We treat the application as an <em>art, not a machine</em> — taking all
-    the ingredients a child has to cook with from their life, and composing them into something an admissions officer
-    can't put down. We don't play darts with a child's destiny.</p>
+  <p class="big"><b>Quintessence</b> — the fifth essence. Beyond earth, water, air, and fire, the ancients held a
+    fifth, purest element. Our work begins deeper than the application: <b>supporting your child in discovering who
+    they really are</b> — then helping them cultivate and communicate it. We treat the essay as an <em>art, not a
+    machine</em>, composing the ingredients of a young life into something true. We don't play darts with a child's destiny.</p>
 </div></section>
 
 <section id="process"><div class="wrap">
@@ -208,25 +212,48 @@
   <p class="lede">Tell us where to send your Zoom link, and we'll follow up with the details.</p>
   <!-- TODO: replace action with your Formspree endpoint (https://formspree.io/f/XXXX) — see FORMSPREE-setup.md -->
   <form action="https://formspree.io/f/REPLACE_WITH_YOUR_ENDPOINT" method="POST">
-    <div><label>Parent / guardian name</label><input name="parent_name" required></div>
+    <div><label>Parent first name</label><input name="parent_first" required></div>
+    <div><label>Parent last name</label><input name="parent_last" required></div>
+    <div><label>Student first name</label><input name="student_first"></div>
+    <div><label>Student last name</label><input name="student_last"></div>
     <div><label>Email</label><input type="email" name="email" required></div>
-    <div><label>Phone / WhatsApp / WeChat</label><input name="contact"></div>
-    <div><label>Student name</label><input name="student_name"></div>
-    <div><label>Student's grade this coming fall (2026–27)</label>
-      <select name="grade">
+    <div><label>Phone (call · text · WhatsApp)</label><input name="phone"></div>
+    <div><label>WeChat ID (optional)</label><input name="wechat"><div class="hint">Prefer WeChat? Add your ID.</div></div>
+    <div><label>Student's status this coming fall (2026–27)</label>
+      <select name="status">
         <option value="">Select…</option>
         <option>9th grade (Freshman)</option>
         <option>10th grade (Sophomore)</option>
         <option>11th grade (Junior)</option>
         <option>12th grade (Senior)</option>
+        <option>College transfer applicant</option>
         <option>Already graduated / gap year</option>
-        <option>Younger (8th or below)</option>
+        <option>Younger (8th grade or below)</option>
       </select></div>
+    <div><label>Student's high school</label>
+      <input name="high_school" list="hs" autocomplete="off"><div class="hint">Start typing — pick yours or add it.</div>
+      <datalist id="hs">
+        <option>Herricks High School</option><option>Roslyn High School</option>
+        <option>Great Neck North</option><option>Great Neck South</option>
+        <option>Jericho High School</option><option>Syosset High School</option>
+        <option>Manhasset High School</option><option>Paul D. Schreiber (Port Washington)</option>
+        <option>Wheatley School (East Williston)</option><option>Cold Spring Harbor</option>
+      </datalist></div>
     <div><label>Preferred language</label>
       <select name="language"><option>English</option><option>中文 (Mandarin)</option><option>No preference</option></select>
       <div class="hint">Mandarin language support available.</div></div>
-    <div class="full"><label>What would you most like us to address?</label><input name="question"></div>
-    <div class="full"><label>How did you hear about us? (optional)</label><input name="referral"></div>
+    <div class="full"><label>How did you hear about us?</label>
+      <select name="referral">
+        <option value="">Select…</option>
+        <option>GRACE (Roslyn Chinese Enrichment)</option>
+        <option>A friend or family member</option>
+        <option>WeChat group</option>
+        <option>A current or past client</option>
+        <option>My child's school</option>
+        <option>Online search</option>
+        <option>Other</option>
+      </select></div>
+    <div class="full"><label>What would you most like us to address? (optional)</label><input name="question"></div>
     <button class="full" type="submit">Request my Zoom link</button>
   </form>
 </div></section>
