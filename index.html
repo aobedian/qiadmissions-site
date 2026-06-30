@@ -236,14 +236,14 @@
 
 <!-- FOUNDER + TEAM (who you're working with — the people) -->
 <section class="founder" id="founder"><div class="wrap col">
-  <div class="eyebrow">Who you're working with</div>
+  <div class="eyebrow">Director &amp; Founder</div>
   <div class="h2 serif">Adam Obedian</div>
   <p class="body">Adam founded Quintessence to turn years of guiding students into their top-choice schools into a
      single, clear method. He studied <b>Philosophy and Drama at Columbia</b> — a writer's training, and a reader of
      people. That craft is the center of how Quintessence works: finding the true shape of a student's story, and
      helping them tell it in their own voice.</p>
   <div class="team">
-    <h3 class="serif">A firm, not a solo act</h3>
+    <h3 class="serif">Our Team</h3>
     <p>Your child works with a superior team — sharp writers and strategists, trained directly in our method and held
        to one exacting standard — with Adam guiding the strategy behind every application. It's a firm, not a single
        person's calendar, so the depth of attention stays the same, family to family.</p>
@@ -293,7 +293,7 @@
 <section class="rsvp" id="rsvp"><div class="wrap">
   <div class="eyebrow">Tell us where to begin</div>
   <div class="h2 serif">A few details, and we'll be in touch.</div>
-  <p class="lede">Choose what you'd like below. We'll follow up with your Zoom link, or with times for a consultation.</p>
+  <p class="lede">Choose what you'd like below. We'll follow up with your Zoom link, or with times for a consultation. <span style="white-space:nowrap">🔒 Your family's details stay strictly private</span> — used only to reach you, never shared.</p>
   <!-- RSVP capture via Web3Forms (free, no account). ACTIVATE: go to web3forms.com, enter qiadmissions@gmail.com,
        verify, copy the Access Key, and paste it into the access_key value below. Submissions then email qiadmissions@gmail.com. -->
   <form action="https://api.web3forms.com/submit" method="POST">
@@ -330,7 +330,7 @@
     <div><label>Preferred language</label><select name="language"><option>English</option><option>中文 (Mandarin)</option><option>No preference</option></select><div class="hint">Mandarin language support available.</div></div>
     <div><label>How did you hear about us?</label><select name="referral"><option value="">Select…</option><option>GRACE (Roslyn Chinese Enrichment)</option><option>A friend or family member</option><option>WeChat group</option><option>A current or past client</option><option>My child's school</option><option>Online search</option><option>Other</option></select></div>
     <div class="full"><label>Anything you'd like us to know? (optional)</label><input name="note"></div>
-    <label class="full" style="font-size:14px;color:var(--soft);text-transform:none;letter-spacing:0;font-weight:400;display:block"><input type="checkbox" name="email_consent" value="yes" style="margin-right:8px">Yes — I'd like to receive emails from Quintessence: my Zoom link, and occasional admissions insights. You can unsubscribe anytime.</label>
+    <label class="full" style="font-size:14px;color:var(--soft);text-transform:none;letter-spacing:0;font-weight:400;display:block"><input type="checkbox" id="consent" name="email_consent" value="yes" style="margin-right:8px">Yes — I'd like to receive emails from Quintessence: my Zoom link, and occasional admissions insights. You can unsubscribe anytime.</label>
     <button class="full" type="submit">Send</button>
   </form>
 </div></section>
@@ -340,5 +340,10 @@
   <div class="fmeta"><span class="qimono">QI</span><br>qiadmissions.com<br>© 2026 Quintessence</div>
 </div></footer>
 
+<script>
+  /* auto-check the email-consent box once the visitor starts filling the form (they can still uncheck) */
+  (function(){ var f=document.querySelector('.rsvp form'); if(!f) return; var c=document.getElementById('consent'); var done=false;
+    f.addEventListener('input', function(){ if(!done && c){ c.checked=true; done=true; } }); })();
+</script>
 </body>
 </html>
