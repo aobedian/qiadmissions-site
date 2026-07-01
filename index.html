@@ -96,11 +96,14 @@
   .method .intro{ font-size:17px; color:var(--ink); line-height:1.6; max-width:60ch; margin-top:16px; }
   .method .intro b{ color:var(--accent); }
   .steps{ margin-top:26px; }
-  .step{ display:grid; grid-template-columns:160px 1fr; gap:26px; padding:13px 0; border-top:1px solid var(--line); align-items:baseline; }
+  .step{ display:grid; grid-template-columns:205px 1fr; gap:26px; padding:13px 0; border-top:1px solid var(--line); align-items:baseline; }
   .step:last-of-type{ border-bottom:1px solid var(--line); }
   .step .dot{ display:inline-block; width:11px; height:11px; border-radius:50%; border:1px solid rgba(0,0,0,.14); margin-bottom:8px; }
-  .step .name{ font-family:var(--serif); font-weight:600; font-size:26px; line-height:1; letter-spacing:.015em; }
-  .step .ph{ font-size:10.5px; letter-spacing:.16em; text-transform:uppercase; color:var(--soft); margin-top:6px; }
+  .step .steplabel .dot{ display:inline-block; margin-bottom:9px; }
+  .step .lbl{ font-family:var(--serif); font-size:24px; line-height:1.12; }
+  .step .elem{ font-style:italic; font-weight:600; }
+  .step .sep2{ color:var(--gold); margin:0 3px; }
+  .step .phase{ font-style:normal; font-weight:600; color:var(--ink); }
   .step .txt{ font-size:15.5px; line-height:1.52; }
   .step .deliv{ display:block; margin-top:7px; font-family:var(--serif); font-weight:600; font-size:15px; color:var(--navy); }
   .seehow{ margin-top:26px; }
@@ -225,19 +228,19 @@
      admissions process with something intentional and strategic: <b>results by design.</b></p>
   <div class="steps">
     <div class="step">
-      <div><span class="dot" style="background:#ffffff;border:1.5px solid #c2bdb1;box-shadow:0 0 6px rgba(0,0,0,.06)"></span><div class="name" style="color:#444b54">Space</div><div class="ph">Framing</div></div>
+      <div class="steplabel"><span class="dot" style="background:#ffffff;border:1.5px solid #c2bdb1;box-shadow:0 0 6px rgba(0,0,0,.06)"></span><span class="lbl"><i class="elem" style="color:#444b54">Space</i> <span class="sep2">·</span> <span class="phase">Framing</span></span></div>
       <div class="txt">We get clear on what colleges are really looking for, and everything your child has to work with. This is where the school list takes shape.<span class="deliv">Applicant DNA Profile · the school list · the strategic plan</span></div></div>
     <div class="step">
-      <div><span class="dot" style="background:#b3322a"></span><div class="name" style="color:#b3322a">Fire</div><div class="ph">Focusing</div></div>
+      <div class="steplabel"><span class="dot" style="background:#b3322a"></span><span class="lbl"><i class="elem" style="color:#b3322a">Fire</i> <span class="sep2">·</span> <span class="phase">Focusing</span></span></div>
       <div class="txt">We find the core — the one true through-line that ties a whole life into a single, clear story — and turn it into a plan for every essay.<span class="deliv">A defining narrative · an Essay Blueprint for each essay</span></div></div>
     <div class="step">
-      <div><span class="dot" style="background:#2f6fb0"></span><div class="name" style="color:#2f6fb0">Water</div><div class="ph">Flowing</div></div>
+      <div class="steplabel"><span class="dot" style="background:#2f6fb0"></span><span class="lbl"><i class="elem" style="color:#2f6fb0">Water</i> <span class="sep2">·</span> <span class="phase">Flowing</span></span></div>
       <div class="txt">Your child writes the essays, in their own voice, working from the blueprint. We guide; they write.<span class="deliv">First drafts, entirely their own</span></div></div>
     <div class="step">
-      <div><span class="dot" style="background:#3f8a5b"></span><div class="name" style="color:#3f8a5b">Air</div><div class="ph">Fixing</div></div>
+      <div class="steplabel"><span class="dot" style="background:#3f8a5b"></span><span class="lbl"><i class="elem" style="color:#3f8a5b">Air</i> <span class="sep2">·</span> <span class="phase">Fixing</span></span></div>
       <div class="txt">We strengthen the structure — does each essay do its job, sound like your child, and hold together as one application?<span class="deliv">Revised drafts</span></div></div>
     <div class="step">
-      <div><span class="dot" style="background:#9c8049"></span><div class="name" style="color:#9c8049">Earth</div><div class="ph">Finalizing</div></div>
+      <div class="steplabel"><span class="dot" style="background:#9c8049"></span><span class="lbl"><i class="elem" style="color:#9c8049">Earth</i> <span class="sep2">·</span> <span class="phase">Finalizing</span></span></div>
       <div class="txt">The last pass: polish, every requirement met, ready to submit. We call it finalizing, not finishing — the work isn't done until it's truly ready.<span class="deliv">The final application, ready to submit</span></div></div>
   </div>
   <div class="differ">
