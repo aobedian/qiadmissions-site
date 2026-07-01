@@ -18,7 +18,7 @@
     --accent:#6d1f2c; --navy:#0e2a3a; --gold:#9c8049;
     --serif:'Cormorant Garamond',Georgia,serif; --sans:'Mulish',system-ui,-apple-system,Arial,sans-serif; }
   *{ box-sizing:border-box; margin:0; padding:0; }
-  html{ scroll-behavior:smooth; } body{ background:var(--bg); color:var(--ink); font-family:var(--sans); line-height:1.75; }
+  html{ scroll-behavior:smooth; } @view-transition{ navigation:auto; } body{ background:var(--bg); color:var(--ink); font-family:var(--sans); line-height:1.75; }
   .serif{ font-family:var(--serif); font-weight:600; } a{ color:inherit; }
   nav{ position:sticky; top:0; z-index:20; background:rgba(246,244,239,.93); -webkit-backdrop-filter:blur(10px); backdrop-filter:blur(10px); border-bottom:1px solid var(--line); }
   nav .wrap{ max-width:1040px; margin:0 auto; padding:0 28px; display:flex; align-items:center; justify-content:space-between; min-height:64px; gap:12px; }
@@ -61,8 +61,8 @@
 <body>
 
 <nav><div class="wrap">
-  <a class="navbrand" href="/"><span class="navqi">QI</span><span class="navmark">Quintessence</span></a>
-  <a class="navlink" href="/#book">Begin</a>
+  <a class="navbrand" href="index.html"><span class="navqi">QI</span><span class="navmark">Quintessence</span></a>
+  <a class="navlink" href="index.html#rsvp">Sign up</a>
 </div></nav>
 
 <article class="article">
@@ -155,8 +155,8 @@
 </article>
 
 <div class="endcta">
-  <a class="btn" href="/#book">Begin a conversation</a>
-  <a class="backlink" href="/">← Back to Quintessence</a>
+  <a class="btn" href="index.html#rsvp">Sign up for the complimentary seminar →</a>
+  <a class="backlink" href="index.html">← Back to Quintessence</a>
 </div>
 
 <footer><div class="wrap">
