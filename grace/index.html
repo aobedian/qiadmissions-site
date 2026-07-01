@@ -14,7 +14,10 @@
 <meta property="og:url" content="https://qiadmissions.com/">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://qiadmissions.com/og-grace.png">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%2315171c'/%3E%3Ctext x='50' y='68' font-family='Georgia,serif' font-size='42' letter-spacing='1' fill='%23f6f4ef' text-anchor='middle'%3EQI%3C/text%3E%3C/svg%3E">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
@@ -185,6 +188,7 @@
   #methodOverlay .mbar{ position:sticky; top:0; z-index:5; background:rgba(246,244,239,.92); -webkit-backdrop-filter:blur(10px); backdrop-filter:blur(10px); border-bottom:1px solid var(--line); }
   #methodOverlay .mbar-in{ max-width:1040px; margin:0 auto; padding:0 28px; min-height:60px; display:flex; align-items:center; justify-content:space-between; gap:12px; }
   #methodOverlay .mback{ display:inline-flex; align-items:center; gap:9px; background:none; border:0; cursor:pointer; color:var(--ink); padding:8px 0; }
+  #methodOverlay:focus{ outline:none; }
   #methodOverlay .mback .chev{ color:var(--accent); font-size:19px; transition:transform .25s ease; }
   #methodOverlay .mback:hover .chev{ transform:translateX(-4px); }
   #methodOverlay .mclose{ background:none; border:0; cursor:pointer; font-size:25px; line-height:1; color:var(--soft); width:42px; height:42px; border-radius:50%; display:flex; align-items:center; justify-content:center; }
@@ -423,7 +427,7 @@
 </div><!-- /#site -->
 
 <!-- The Method — folded in as a seamless reading panel (content byte-identical to method.html, which remains as a no-JS fallback) -->
-<div id="methodOverlay" role="dialog" aria-label="The Method">
+<div id="methodOverlay" role="dialog" aria-label="The Method" tabindex="-1">
   <div class="mtop"></div>
   <div class="mbar"><div class="mbar-in">
     <button class="mback" type="button" data-close><span class="chev">←</span><span class="navqi">QI</span><span class="navmark">Quintessence</span></button>
@@ -552,7 +556,7 @@
     var root=document.documentElement, isOpen=false;
     function hideNow(){ if(!isOpen){ overlay.style.display='none'; } }
     function onClosedEnd(e){ if(e.target!==overlay || e.propertyName!=='transform') return; overlay.removeEventListener('transitionend',onClosedEnd); hideNow(); }
-    function openMethod(){ if(isOpen) return; isOpen=true; overlay.removeEventListener('transitionend',onClosedEnd); overlay.style.display='block'; overlay.scrollTop=0; document.body.style.overflow='hidden'; requestAnimationFrame(function(){ requestAnimationFrame(function(){ root.classList.add('method-open'); }); }); try{ history.pushState({qm:1},''); }catch(e){} var b=overlay.querySelector('[data-close]'); if(b){ try{ b.focus({preventScroll:true}); }catch(e){} } }
+    function openMethod(){ if(isOpen) return; isOpen=true; overlay.removeEventListener('transitionend',onClosedEnd); overlay.style.display='block'; overlay.scrollTop=0; document.body.style.overflow='hidden'; requestAnimationFrame(function(){ requestAnimationFrame(function(){ root.classList.add('method-open'); }); }); try{ history.pushState({qm:1},''); }catch(e){} try{ overlay.focus({preventScroll:true}); }catch(e){} }
     function closeMethod(fromPop){ if(!isOpen) return; isOpen=false; root.classList.remove('method-open'); document.body.style.overflow=''; overlay.addEventListener('transitionend',onClosedEnd); setTimeout(hideNow,640); if(!fromPop && history.state && history.state.qm){ try{ history.back(); }catch(e){} } }
     function goTo(sel){ var el=document.querySelector(sel); closeMethod(); if(el){ requestAnimationFrame(function(){ requestAnimationFrame(function(){ var navH=document.querySelector('nav').getBoundingClientRect().height; window.scrollTo(0, el.getBoundingClientRect().top + window.pageYOffset - navH); }); }); } }
     document.querySelectorAll('[data-method]').forEach(function(a){ a.addEventListener('click',function(e){ e.preventDefault(); openMethod(); }); });
