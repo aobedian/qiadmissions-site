@@ -14,10 +14,10 @@
 <meta property="og:url" content="https://qiadmissions.com/">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://qiadmissions.com/og.png">
-<link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
-<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
@@ -43,16 +43,24 @@
 
   .topbar{ height:3px; background:var(--navy); }
   nav{ position:sticky; top:0; z-index:20; background:rgba(246,244,239,.93); -webkit-backdrop-filter:blur(10px); backdrop-filter:blur(10px); border-bottom:1px solid var(--line); }
-  nav .wrap{ display:flex; align-items:center; justify-content:space-between; min-height:62px; gap:12px; flex-wrap:wrap; }
-  .navbrand{ display:flex; align-items:baseline; gap:10px; }
+  nav .wrap{ display:flex; align-items:center; justify-content:space-between; min-height:62px; gap:12px; flex-wrap:wrap; position:relative; }
+  .navbrand{ display:flex; align-items:baseline; gap:13px; text-decoration:none; color:inherit; }
+  .navbrand:hover .navmark{ color:var(--accent); }
   .navqi{ font-family:var(--serif); font-weight:600; font-size:20px; letter-spacing:.08em; color:var(--accent); }
   .navmark{ font-family:var(--serif); font-weight:600; font-size:21px; }
-  .navlinks{ display:flex; gap:22px; align-items:center; }
+  .navlinks{ display:flex; gap:26px; align-items:center; flex-wrap:wrap; }
   .navlink{ font-size:12px; letter-spacing:.16em; text-transform:uppercase; color:var(--ink); text-decoration:none; transition:color .2s ease; }
   .navlink:hover{ color:var(--accent); }
   .navcta{ font-size:12px; letter-spacing:.16em; text-transform:uppercase; color:var(--ink); text-decoration:none; border:1px solid var(--line); padding:8px 15px; transition:color .2s ease, background .2s ease, border-color .2s ease; }
   .navcta:hover{ color:#fff; background:var(--accent); border-color:var(--accent); }
   .navurl{ font-size:12px; letter-spacing:.06em; color:var(--accent); text-decoration:none; font-weight:700; }
+  .navtoggle{ display:none; width:44px; height:44px; align-items:center; justify-content:center; background:none; border:0; cursor:pointer; padding:0; margin-right:-6px; }
+  .navtoggle .bars{ display:flex; flex-direction:column; gap:5px; width:22px; }
+  .navtoggle .bars span{ display:block; height:1px; width:100%; background:var(--ink); transition:transform .32s cubic-bezier(.4,0,.2,1), opacity .18s ease; }
+  nav.menu-open .navtoggle .bars span:nth-child(1){ transform:translateY(6px) rotate(45deg); }
+  nav.menu-open .navtoggle .bars span:nth-child(2){ opacity:0; }
+  nav.menu-open .navtoggle .bars span:nth-child(3){ transform:translateY(-6px) rotate(-45deg); }
+  @keyframes qmenuin{ from{ opacity:0; transform:translateY(-7px) } to{ opacity:1; transform:none } }
 
   /* HERO — fills the first screen, crest band pinned at its bottom */
   .hero{ min-height:calc(100vh - 63px); min-height:calc(100svh - 63px); display:flex; flex-direction:column; justify-content:center; gap:clamp(40px,7vh,80px); padding:52px 0 0; border-bottom:none; }
@@ -152,15 +160,28 @@
   .fdesc{ font-size:12px; letter-spacing:.13em; text-transform:uppercase; color:var(--soft); margin-top:8px; }
   .fmeta{ font-size:13px; color:var(--soft); line-height:1.8; text-align:right; }
   .qimono{ font-family:var(--serif); font-weight:600; letter-spacing:.1em; border:1px solid var(--line); padding:3px 9px; color:var(--accent); }
+  .flang{ display:inline-block; margin-top:14px; font-size:13px; letter-spacing:.04em; color:var(--soft); text-decoration:none; border-bottom:1px solid var(--line); padding-bottom:2px; transition:color .2s ease, border-color .2s ease; }
+  .flang:hover{ color:var(--accent); border-color:var(--accent); }
 
   @media(max-width:760px){
     html{ scroll-padding-top:57px; }
     section{ padding:56px 0; } .wrap{ padding:0 24px; }
-    /* top bar: trim to one tidy row */
+    /* top bar: brand stays on one row; links collapse into a calm dropdown */
     .hide-sm{ display:none; }
-    nav .wrap{ min-height:56px; gap:10px 16px; }
+    nav .wrap{ min-height:56px; gap:10px 14px; flex-wrap:nowrap; }
     .navqi{ font-size:17px; } .navmark{ font-size:18px; }
-    .navlinks{ gap:18px; } .navlink{ font-size:12px; letter-spacing:.1em; } .navcta{ font-size:12px; letter-spacing:.1em; padding:7px 13px; }
+    .navtoggle{ display:inline-flex; }
+    .navlinks{ position:absolute; top:calc(100% + 1px); right:18px; z-index:30; display:none;
+      flex-direction:column; align-items:stretch; gap:0; min-width:214px; background:var(--paper);
+      border:1px solid var(--line); box-shadow:0 22px 44px -14px rgba(25,27,31,.22); padding:5px 0; }
+    nav.menu-open .navlinks{ display:flex; animation:qmenuin .28s cubic-bezier(.4,0,.2,1) both; }
+    .navlinks .navurl{ display:none; }
+    .navlinks .navcta{ border:0; border-bottom:1px solid var(--line); background:none; color:var(--ink);
+      text-align:left; padding:14px 22px; font-size:12px; letter-spacing:.14em; }
+    .navlinks .navcta:last-of-type{ border-bottom:0; }
+    .navlinks .navcta:hover, .navlinks .navcta:active{ color:var(--accent); background:rgba(0,0,0,.022); }
+    .navlinks .langtoggle{ margin:0; padding:12px 22px 10px; border-left:0; border-top:1px solid var(--line); justify-content:flex-start; gap:16px; }
+    .navlinks .lang{ padding:7px 0; }
     /* hero fills the first screen with the dark proof band pinned visibly at its base */
     .hero{ justify-content:flex-start; gap:0; padding:0; min-height:calc(100vh - 59px); min-height:calc(100svh - 59px); }
     .heromain{ flex:1 1 auto; display:flex; flex-direction:column; justify-content:center; padding:26px 24px; }
@@ -179,7 +200,7 @@
 
   /* ===== The Method — seamless in-page reading panel ===== */
   #site{ transition:transform .66s cubic-bezier(.4,0,.2,1); }
-  .method-open #site{ transform:translateX(-34px); }
+  .method-open #site{ transform:translateX(-18px); }
   #methodOverlay{ position:fixed; inset:0; z-index:200; background:var(--bg); overflow-y:auto; overflow-x:hidden; -webkit-overflow-scrolling:touch;
     transform:translateX(100%); transition:transform .66s cubic-bezier(.4,0,.2,1); display:none; box-shadow:-34px 0 70px rgba(14,42,58,.18); }
   .method-open #methodOverlay{ transform:translateX(0); }
@@ -226,14 +247,10 @@
   #methodOverlay .backlink{ display:inline-block; margin-top:22px; font-size:12px; letter-spacing:.13em; text-transform:uppercase; color:var(--soft); text-decoration:none; cursor:pointer; }
   #methodOverlay .backlink:hover{ color:var(--accent); }
   /* staggered rise as the panel arrives */
-  @keyframes qelrise{ from{ opacity:0; transform:translateY(16px) } to{ opacity:1; transform:none } }
-  .method-open #methodOverlay .mheroinner{ animation:qelrise .6s cubic-bezier(.2,.7,.2,1) both; animation-delay:.08s; }
-  .method-open #methodOverlay .el{ animation:qelrise .55s cubic-bezier(.2,.7,.2,1) both; }
-  .method-open #methodOverlay .el:nth-child(1){ animation-delay:.10s; }
-  .method-open #methodOverlay .el:nth-child(2){ animation-delay:.17s; }
-  .method-open #methodOverlay .el:nth-child(3){ animation-delay:.24s; }
-  .method-open #methodOverlay .el:nth-child(4){ animation-delay:.31s; }
-  .method-open #methodOverlay .el:nth-child(5){ animation-delay:.38s; }
+  @keyframes qelrise{ from{ opacity:0 } to{ opacity:1 } }
+  /* calm: one gentle unified fade of the panel content (no per-element stagger, no jumpy rise) */
+  .method-open #methodOverlay .mheroinner{ animation:qelrise .8s ease .2s both; }
+  .method-open #methodOverlay .article{ animation:qelrise .8s ease .2s both; }
   @media(prefers-reduced-motion:reduce){ #site, #methodOverlay, .method-open #methodOverlay .el, .method-open #methodOverlay .mheroinner{ transition:none !important; animation:none !important; } }
   @media(max-width:760px){
     .method-open #site{ transform:none; }
@@ -244,7 +261,7 @@
     #methodOverlay .article{ padding:48px 22px 30px; } #methodOverlay p{ font-size:19px; }
   }
   /* ===== Register — seamless in-page panel (inherits page colour) ===== */
-  .register-open #site{ transform:translateX(-34px); }
+  .register-open #site{ transform:translateX(-18px); }
   #registerOverlay{ position:fixed; inset:0; z-index:210; background:var(--bg); overflow-y:auto; overflow-x:hidden; -webkit-overflow-scrolling:touch; transform:translateX(100%); transition:transform .66s cubic-bezier(.4,0,.2,1); display:none; box-shadow:-34px 0 70px rgba(0,0,0,.15); }
   .register-open #registerOverlay{ transform:translateX(0); }
   #registerOverlay:focus{ outline:none; }
@@ -267,24 +284,24 @@
   #registerOverlay .formslot .slotnote{ border:1px dashed var(--line); background:var(--paper); padding:40px 28px; text-align:center; color:var(--soft); font-size:13px; letter-spacing:.02em; line-height:1.7; }
   @media(prefers-reduced-motion:reduce){ #registerOverlay{ transition:none !important; } }
   @media(max-width:760px){ .register-open #site{ transform:none; } #registerOverlay .rbar-in{ padding:0 20px; min-height:54px; } #registerOverlay .rwrap{ padding:34px 22px 72px; } }
-.seminar .col{max-width:76ch}.seminar .learn{max-width:76ch}.br5{display:none}@media(max-width:760px){.br5{display:inline}}.u{white-space:nowrap}</style>
+</style>
 </head>
 <body>
 
 <div id="site">
 <div class="topbar"></div>
 <nav><div class="wrap">
-  <div class="navbrand"><span class="navqi">QI</span><span class="navmark">Quintessence</span></div>
-  <div class="navlinks">
+  <a class="navbrand" href="#top" aria-label="Quintessence — home"><span class="navqi">QI</span><span class="navmark">Quintessence</span></a>
+  <button class="navtoggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="navlinks"><span class="bars"><span></span><span></span><span></span></span></button>
+  <div class="navlinks" id="navlinks">
     <a class="navurl hide-sm" href="https://qiadmissions.com">qiadmissions.com</a>
-    <a class="navlink" href="method.html" data-method>The Method</a>
+    <a class="navcta" href="/method.html" data-method>The Method</a>
     <a class="navcta" href="#rsvp">Reserve</a>
-    <a class="navlink hide-sm" href="#contact">Contact</a>
   </div>
 </div></nav>
 
 <!-- HERO — fills the first screen, crests pinned at the bottom of it -->
-<header class="hero">
+<header class="hero" id="top">
   <div class="heromain">
     <div class="heroinner">
     <div class="eyebrow">Private College Counseling &amp; Application Advisory</div>
@@ -294,7 +311,7 @@
        <b>results by design.</b> We help your child become their truest self and earn a place at the college of their choice.</p>
     <div class="herocta">
       <a class="btn btn-dark" href="#seminar">Sign up — complimentary seminar · July 12</a>
-      <a class="tlink" href="method.html" data-method>See our method →</a>
+      <a class="tlink" href="/method.html" data-method>See our method →</a>
     </div>
     </div>
   </div>
@@ -333,7 +350,7 @@
     <div class="it"><b>02</b> The Incentives That Drive Admissions</div>
     <div class="it"><b>03</b> The Rare Unity of Strategy and Authenticity</div>
     <div class="it"><b>04</b> The X-Factor in a Standout Applicant</div>
-    <div class="it"><b>05</b> <span class="u">The Quintessence Approach:</span> the QI Five-Phase System &amp; Art of the Essay</div>
+    <div class="it"><b>05</b> <span class="u">The Quintessence Approach:</span> <span class="u">the QI Five-Phase System &amp; Art of the Essay</span></div>
   </div>
   </div>
   <div class="facts"><span class="fp">Sunday, July 12</span> <span class="d">·</span> <span class="fp">8:00 PM EDT</span> <span class="d">·</span> <span class="fp">Live on Zoom</span> <span class="d">·</span> <span class="fp">Complimentary</span></div>
@@ -370,7 +387,7 @@
     <span><b>Excellence is the difference.</b></span>
     <span><b>One student at a time.</b></span>
   </div>
-  <div class="seehow"><a class="tlink" href="method.html" data-method>See the full method →</a></div>
+  <div class="seehow"><a class="tlink" href="/method.html" data-method>See the full method →</a></div>
 </div></section>
 
 <!-- FOUNDER + TEAM (concise; full bios → About page) -->
@@ -445,7 +462,7 @@
 
 <footer><div class="wrap">
   <div><div class="fmark serif">Quintessence</div><div class="fdesc">Private College Counseling &amp; Application Advisory</div></div>
-  <div class="fmeta"><span class="qimono">QI</span><br>qiadmissions.com</div>
+  <div class="fmeta"><span class="qimono">QI</span><br>qiadmissions.com<br><a class="flang" href="/grace-zh" lang="zh" hreflang="zh-Hans">中文</a></div>
 </div></footer>
 </div><!-- /#site -->
 
@@ -455,7 +472,7 @@
   <div class="mbar"><div class="mbar-in">
     <button class="mback" type="button" data-close><span class="chev">←</span><span class="navqi">QI</span><span class="navmark">Quintessence</span></button>
     <div class="mbar-actions">
-      <a class="mreserve" href="#rsvp">Reserve</a>
+      <a class="mreserve" href="#rsvp" data-goto="#rsvp">Reserve</a>
       <button class="mclose" type="button" data-close aria-label="Close">×</button>
     </div>
   </div></div>
@@ -551,7 +568,7 @@
   </article>
 
   <div class="endcta">
-    <a class="btn" href="#rsvp">Sign up for the complimentary seminar →</a>
+    <a class="btn" href="#rsvp" data-goto="#rsvp">Sign up for the complimentary seminar →</a>
     <a class="backlink" href="#" data-close>← Back to Quintessence</a>
   </div>
 </div>
@@ -605,6 +622,7 @@
     overlay.querySelectorAll('[data-goto]').forEach(function(a){ a.addEventListener('click',function(e){ e.preventDefault(); goTo(a.getAttribute('data-goto')); }); });
     window.addEventListener('popstate',function(){ if(isOpen){ closeMethod(true); } });
     document.addEventListener('keydown',function(e){ if((e.key==='Escape'||e.key==='Esc') && isOpen){ closeMethod(); } });
+  })();
   /* ===== Register — seamless in-page panel ===== */
   (function(){
     var ov=document.getElementById('registerOverlay'); if(!ov) return;
@@ -617,6 +635,18 @@
     ov.querySelectorAll('[data-rclose]').forEach(function(a){ a.addEventListener('click',function(e){ e.preventDefault(); closeReg(); }); });
     window.addEventListener('popstate',function(){ if(open){ closeReg(true); } });
     document.addEventListener('keydown',function(e){ if((e.key==='Escape'||e.key==='Esc') && open){ closeReg(); } });
+  })();
+  /* ===== Mobile nav — hamburger dropdown ===== */
+  (function(){
+    var nav=document.querySelector('nav'); if(!nav) return;
+    var btn=nav.querySelector('.navtoggle'), menu=nav.querySelector('.navlinks'); if(!btn||!menu) return;
+    function close(){ nav.classList.remove('menu-open'); btn.setAttribute('aria-expanded','false'); }
+    function open(){ nav.classList.add('menu-open'); btn.setAttribute('aria-expanded','true'); }
+    btn.addEventListener('click',function(e){ e.stopPropagation(); nav.classList.contains('menu-open')?close():open(); });
+    menu.querySelectorAll('a').forEach(function(a){ a.addEventListener('click',function(){ close(); }); });
+    document.addEventListener('click',function(e){ if(nav.classList.contains('menu-open') && !nav.contains(e.target)){ close(); } });
+    document.addEventListener('keydown',function(e){ if((e.key==='Escape'||e.key==='Esc') && nav.classList.contains('menu-open')){ close(); } });
+    var mq=matchMedia('(min-width:761px)'); function onMq(ev){ if(ev.matches) close(); } try{ mq.addEventListener('change',onMq); }catch(e){ mq.addListener(onMq); }
   })();
 </script>
 </body>
