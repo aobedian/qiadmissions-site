@@ -286,7 +286,7 @@
   <div class="navlinks">
     <a class="navurl hide-sm" href="https://qiadmissions.com">qiadmissions.com</a>
     <a class="navlink" href="method-grace.html" data-method>The Method</a>
-    <a class="navcta" href="#rsvp" data-register>Reserve</a>
+    <a class="navcta" href="#rsvp">Reserve</a>
     <a class="navlink hide-sm" href="#contact">Contact</a>
     <span class="langtoggle" role="group" aria-label="Language"><a class="lang active" aria-current="page">EN</a><span class="langsep"></span><a class="lang zh" href="index-grace-zh.html">中文</a></span>
   </div>
@@ -346,7 +346,7 @@
   </div>
   </div>
   <div class="facts"><span class="fp">Sunday, July 12</span> <span class="d">·</span> <span class="fp">8:00 PM EDT</span> <span class="d">·</span> <span class="fp">Live on Zoom</span> <span class="d">·</span> <span class="fp">Complimentary</span></div>
-  <div class="row"><a class="btn btn-light" href="#rsvp" data-register>Reserve your place →</a></div>
+  <div class="row"><a class="btn btn-light" href="#rsvp">Reserve your place →</a></div>
 </div></section>
 
 <!-- OUR APPROACH — the promise + the QI Five-Phase System -->
@@ -405,7 +405,43 @@
   <div class="h2 serif">Save your seat at the seminar.</div>
   <p class="lede">Sunday, July 12 · 8 PM EDT, on Zoom. Tell us where to send your link.</p>
   <!-- RSVP capture via Web3Forms — verified working (delivers to qiadmissions@gmail.com). -->
-  <a class="btn btn-dark" href="#registerOverlay" data-register>Reserve your place</a>
+  <form action="https://api.web3forms.com/submit" method="POST">
+    <input type="hidden" name="access_key" value="74d99fe3-e078-4796-8c93-920b2c6b221d">
+    <input type="hidden" name="subject" value="New Quintessence Seminar RSVP">
+    <input type="hidden" name="from_name" value="Quintessence · qiadmissions.com">
+    <input type="hidden" name="redirect" value="https://qiadmissions.com/thanks.html">
+    <input type="checkbox" name="botcheck" style="display:none !important" tabindex="-1" autocomplete="off">
+    <div class="full"><label>You're reserving a seat at —</label>
+      <div style="font-family:var(--serif);font-size:20px;color:var(--accent);padding:4px 0 2px;line-height:1.25">What Colleges Really Want: A Strategic System for Standout Applicants</div><div style="font-size:13px;color:var(--soft);margin-top:4px">Sunday, July 12 · 8 PM EDT · Live on Zoom</div>
+      <label style="display:block;font-size:14px;color:var(--soft);margin-top:10px;text-transform:none;letter-spacing:0;font-weight:400"><input type="checkbox" name="addon_consult" value="yes" style="width:auto;height:auto;margin-right:8px">I'd also like a private consultation, to begin sooner</label>
+      <label style="display:block;font-size:14px;color:var(--soft);margin-top:6px;text-transform:none;letter-spacing:0;font-weight:400"><input type="checkbox" name="addon_aoe" value="yes" style="width:auto;height:auto;margin-right:8px">Add me to the waitlist for the next Art of the Essay series</label>
+    </div>
+    <div><label>Parent first name</label><input name="parent_first" required></div>
+    <div><label>Parent last name</label><input name="parent_last" required></div>
+    <div><label>Student first name</label><input name="student_first"></div>
+    <div><label>Student last name</label><input name="student_last"></div>
+    <div><label>Email</label><input type="email" name="email" required></div>
+    <div><label>Phone</label><input name="phone"></div>
+    <div><label>WhatsApp (if different)</label><input name="whatsapp"></div>
+    <div><label>WeChat ID (optional)</label><input name="wechat"></div>
+    <div class="full"><label>Preferred way(s) to reach you</label>
+      <div style="display:flex;flex-wrap:wrap;gap:12px 18px;margin-top:8px">
+        <label style="font-size:14px;color:var(--soft);text-transform:none;letter-spacing:0;font-weight:400"><input type="checkbox" name="contact_pref" value="Call" style="width:auto;height:auto;margin-right:7px">Call</label>
+        <label style="font-size:14px;color:var(--soft);text-transform:none;letter-spacing:0;font-weight:400"><input type="checkbox" name="contact_pref" value="Text" style="width:auto;height:auto;margin-right:7px">Text</label>
+        <label style="font-size:14px;color:var(--soft);text-transform:none;letter-spacing:0;font-weight:400"><input type="checkbox" name="contact_pref" value="WhatsApp" style="width:auto;height:auto;margin-right:7px">WhatsApp</label>
+        <label style="font-size:14px;color:var(--soft);text-transform:none;letter-spacing:0;font-weight:400"><input type="checkbox" name="contact_pref" value="WeChat" style="width:auto;height:auto;margin-right:7px">WeChat</label>
+        <label style="font-size:14px;color:var(--soft);text-transform:none;letter-spacing:0;font-weight:400"><input type="checkbox" name="contact_pref" value="Email" style="width:auto;height:auto;margin-right:7px">Email</label>
+      </div></div>
+    <div><label>Student's status this coming fall (2026–27)</label>
+      <select name="status"><option value="">Select…</option><option>9th grade (Freshman)</option><option>10th grade (Sophomore)</option><option>11th grade (Junior)</option><option>12th grade (Senior)</option><option>College transfer applicant</option><option>Already graduated / gap year</option><option>Younger (8th or below)</option></select></div>
+    <div><label>Student's high school</label><input name="high_school" list="hs" autocomplete="off">
+      <datalist id="hs"><option>Herricks High School</option><option>Roslyn High School</option><option>Great Neck South</option><option>Great Neck North</option><option>Jericho High School</option><option>Syosset High School</option><option>Manhasset High School</option><option>Paul D. Schreiber (Port Washington)</option><option>Stuyvesant High School</option><option>Bronx High School of Science</option><option>Hunter College High School</option><option>Horace Mann School</option><option>Trinity School</option><option>The Dalton School</option><option>Ramaz School</option><option>Wheatley School (East Williston)</option></datalist></div>
+    <div><label>Preferred language</label><select name="language"><option>English</option><option>中文 (Mandarin)</option><option>No preference</option></select></div>
+    <div><label>How did you hear about us?</label><select name="referral"><option value="">Select…</option><option>A friend or family member</option><option>My child's school</option><option>A current or past client</option><option>WeChat group</option><option>GRACE (Roslyn Chinese Enrichment)</option><option>Online search</option><option>Other</option></select></div>
+    <div class="full"><label>Anything you'd like us to know? (optional)</label><input name="note"></div>
+    <label class="full" style="font-size:14px;color:var(--soft);text-transform:none;letter-spacing:0;font-weight:400;display:block"><input type="checkbox" id="consent" name="email_consent" value="yes" style="width:auto;height:auto;margin-right:8px">Yes — I'd like to receive emails from Quintessence: my Zoom link, and occasional admissions insights. You can unsubscribe anytime.</label>
+    <button class="full" type="submit">Send</button>
+  </form>
 </div></section>
 
 <!-- CONTACT — a quiet, restrained coda -->
@@ -428,7 +464,7 @@
   <div class="mbar"><div class="mbar-in">
     <button class="mback" type="button" data-close><span class="chev">←</span><span class="navqi">QI</span><span class="navmark">Quintessence</span></button>
     <div class="mbar-actions">
-      <a class="mreserve" href="#rsvp" data-register>Reserve</a>
+      <a class="mreserve" href="#rsvp">Reserve</a>
       <button class="mclose" type="button" data-close aria-label="Close">×</button>
     </div>
   </div></div>
@@ -524,7 +560,7 @@
   </article>
 
   <div class="endcta">
-    <a class="btn" href="#rsvp" data-register>Sign up for the complimentary seminar →</a>
+    <a class="btn" href="#rsvp">Sign up for the complimentary seminar →</a>
     <a class="backlink" href="#" data-close>← Back to Quintessence</a>
   </div>
 </div>
@@ -542,50 +578,14 @@
     <p class="rlede">Sunday, July 12 <span class="d">·</span> 8 PM EDT <span class="d">·</span> Live on Zoom <span class="d">·</span> Complimentary</p>
     <div class="formslot" data-formslot aria-label="Seminar registration form">
       <!-- QI CENTRAL: embed the Web3Forms <form> here (byte-identical from the #rsvp section). -->
-      <form action="https://api.web3forms.com/submit" method="POST">
-    <input type="hidden" name="access_key" value="74d99fe3-e078-4796-8c93-920b2c6b221d">
-    <input type="hidden" name="subject" value="New Quintessence Seminar RSVP">
-    <input type="hidden" name="from_name" value="Quintessence · qiadmissions.com">
-    <input type="hidden" name="redirect" value="https://qiadmissions.com/thanks.html">
-    <input type="checkbox" name="botcheck" style="display:none !important" tabindex="-1" autocomplete="off">
-    <div class="full"><label>You're reserving a seat at —</label>
-      <div style="font-family:var(--serif);font-size:20px;color:var(--accent);padding:4px 0 2px;line-height:1.25">What Colleges Really Want: A Strategic System for Standout Applicants</div><div style="font-size:13px;color:var(--soft);margin-top:4px">Sunday, July 12 · 8 PM EDT · Live on Zoom</div>
-      <label style="display:block;font-size:14px;color:var(--soft);margin-top:10px;text-transform:none;letter-spacing:0;font-weight:400"><input type="checkbox" name="addon_consult" value="yes" style="width:auto;height:auto;margin-right:8px">I'd also like a private consultation, to begin sooner</label>
-      <label style="display:block;font-size:14px;color:var(--soft);margin-top:6px;text-transform:none;letter-spacing:0;font-weight:400"><input type="checkbox" name="addon_aoe" value="yes" style="width:auto;height:auto;margin-right:8px">Add me to the waitlist for the next Art of the Essay series</label>
-    </div>
-    <div><label>Parent first name</label><input name="parent_first" required></div>
-    <div><label>Parent last name</label><input name="parent_last" required></div>
-    <div><label>Student first name</label><input name="student_first"></div>
-    <div><label>Student last name</label><input name="student_last"></div>
-    <div><label>Email</label><input type="email" name="email" required></div>
-    <div><label>Phone</label><input name="phone"></div>
-    <div><label>WhatsApp (if different)</label><input name="whatsapp"></div>
-    <div><label>WeChat ID (optional)</label><input name="wechat"></div>
-    <div class="full"><label>Preferred way(s) to reach you</label>
-      <div style="display:flex;flex-wrap:wrap;gap:12px 18px;margin-top:8px">
-        <label style="font-size:14px;color:var(--soft);text-transform:none;letter-spacing:0;font-weight:400"><input type="checkbox" name="contact_pref" value="Call" style="width:auto;height:auto;margin-right:7px">Call</label>
-        <label style="font-size:14px;color:var(--soft);text-transform:none;letter-spacing:0;font-weight:400"><input type="checkbox" name="contact_pref" value="Text" style="width:auto;height:auto;margin-right:7px">Text</label>
-        <label style="font-size:14px;color:var(--soft);text-transform:none;letter-spacing:0;font-weight:400"><input type="checkbox" name="contact_pref" value="WhatsApp" style="width:auto;height:auto;margin-right:7px">WhatsApp</label>
-        <label style="font-size:14px;color:var(--soft);text-transform:none;letter-spacing:0;font-weight:400"><input type="checkbox" name="contact_pref" value="WeChat" style="width:auto;height:auto;margin-right:7px">WeChat</label>
-        <label style="font-size:14px;color:var(--soft);text-transform:none;letter-spacing:0;font-weight:400"><input type="checkbox" name="contact_pref" value="Email" style="width:auto;height:auto;margin-right:7px">Email</label>
-      </div></div>
-    <div><label>Student's status this coming fall (2026–27)</label>
-      <select name="status"><option value="">Select…</option><option>9th grade (Freshman)</option><option>10th grade (Sophomore)</option><option>11th grade (Junior)</option><option>12th grade (Senior)</option><option>College transfer applicant</option><option>Already graduated / gap year</option><option>Younger (8th or below)</option></select></div>
-    <div><label>Student's high school</label><input name="high_school" list="hs" autocomplete="off">
-      <datalist id="hs"><option>Herricks High School</option><option>Roslyn High School</option><option>Great Neck South</option><option>Great Neck North</option><option>Jericho High School</option><option>Syosset High School</option><option>Manhasset High School</option><option>Paul D. Schreiber (Port Washington)</option><option>Stuyvesant High School</option><option>Bronx High School of Science</option><option>Hunter College High School</option><option>Horace Mann School</option><option>Trinity School</option><option>The Dalton School</option><option>Ramaz School</option><option>Wheatley School (East Williston)</option></datalist></div>
-    <div><label>Preferred language</label><select name="language"><option>English</option><option>中文 (Mandarin)</option><option>No preference</option></select></div>
-    <div><label>How did you hear about us?</label><select name="referral"><option value="">Select…</option><option>A friend or family member</option><option>My child's school</option><option>A current or past client</option><option>WeChat group</option><option>GRACE (Roslyn Chinese Enrichment)</option><option>Online search</option><option>Other</option></select></div>
-    <div class="full"><label>Anything you'd like us to know? (optional)</label><input name="note"></div>
-    <label class="full" style="font-size:14px;color:var(--soft);text-transform:none;letter-spacing:0;font-weight:400;display:block"><input type="checkbox" id="consent" name="email_consent" value="yes" style="width:auto;height:auto;margin-right:8px">Yes — I'd like to receive emails from Quintessence: my Zoom link, and occasional admissions insights. You can unsubscribe anytime.</label>
-    <button class="full" type="submit">Send</button>
-  </form>
+      <div class="slotnote">Seminar registration form embeds here.</div>
     </div>
   </div>
 </div>
 
 <script>
   /* auto-check the email-consent box once the visitor starts filling the form (they can still uncheck) */
-  (function(){ var f=document.querySelector('.formslot form'); if(!f) return; var c=document.getElementById('consent'); var done=false;
+  (function(){ var f=document.querySelector('.rsvp form'); if(!f) return; var c=document.getElementById('consent'); var done=false;
     f.addEventListener('input', function(){ if(!done && c){ c.checked=true; done=true; } }); })();
   /* duplicate the crest track once for a seamless loop */
   (function(){ var t=document.getElementById('crestTrack'); if(t){ t.innerHTML += t.innerHTML; } })();

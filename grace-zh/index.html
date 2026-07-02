@@ -277,7 +277,7 @@
   <div class="navlinks">
     <a class="navurl hide-sm" href="https://qiadmissions.com">qiadmissions.com</a>
     <a class="navlink" href="#method" data-method>方法</a>
-    <a class="navcta" href="#rsvp" data-register>预约名额</a>
+    <a class="navcta" href="#rsvp">预约名额</a>
     <a class="navlink hide-sm" href="#contact">联系</a>
     <span class="langtoggle" role="group" aria-label="语言 Language"><a class="lang" href="index-grace.html">EN</a><span class="langsep"></span><a class="lang zh active" aria-current="page">中文</a></span>
   </div>
@@ -337,7 +337,7 @@
   </div>
   </div>
   <div class="facts"><span class="fp">7月12日（周日）</span> <span class="d">·</span> <span class="fp">晚 8:00 美东时间</span> <span class="d">·</span> <span class="fp">Zoom 线上直播</span> <span class="d">·</span> <span class="fp">公益</span></div>
-  <div class="row"><a class="btn btn-light" href="#rsvp" data-register>预约名额 →</a></div>
+  <div class="row"><a class="btn btn-light" href="#rsvp">预约名额 →</a></div>
 </div></section>
 
 <!-- OUR APPROACH -->
@@ -387,7 +387,43 @@
   <div class="eyebrow">预约名额</div>
   <div class="h2 serif">预留您的讲座席位。</div>
   <p class="lede">7月12日（周日）· 晚 8:00 美东时间 · Zoom 线上直播。请告诉我们将链接发送至何处。</p>
-  <a class="btn btn-dark" href="#registerOverlay" data-register>预约名额</a>
+  <form action="https://api.web3forms.com/submit" method="POST">
+    <input type="hidden" name="access_key" value="74d99fe3-e078-4796-8c93-920b2c6b221d">
+    <input type="hidden" name="subject" value="New Quintessence Seminar RSVP (ZH)">
+    <input type="hidden" name="from_name" value="Quintessence · qiadmissions.com">
+    <input type="hidden" name="redirect" value="https://qiadmissions.com/thanks.html">
+    <input type="checkbox" name="botcheck" style="display:none !important" tabindex="-1" autocomplete="off">
+    <div class="full"><label>您正在预约的讲座 ——</label>
+      <div style="font-family:var(--serif);font-size:19px;color:var(--accent);padding:4px 0 2px;line-height:1.5">大学真正想要什么：为出众申请者打造的策略体系</div><div style="font-size:13px;color:var(--soft);margin-top:4px">7月12日（周日）· 晚 8:00 美东时间 · Zoom 线上直播</div>
+      <label style="display:block;font-size:14px;color:var(--soft);margin-top:10px;letter-spacing:0;font-weight:400"><input type="checkbox" name="addon_consult" value="yes" style="width:auto;height:auto;margin-right:8px">我也希望预约一次私人咨询，尽早开始</label>
+      <label style="display:block;font-size:14px;color:var(--soft);margin-top:6px;letter-spacing:0;font-weight:400"><input type="checkbox" name="addon_aoe" value="yes" style="width:auto;height:auto;margin-right:8px">请将我加入下一期"文书的艺术"课程的候补名单</label>
+    </div>
+    <div><label>家长名字</label><input name="parent_first" required></div>
+    <div><label>家长姓氏</label><input name="parent_last" required></div>
+    <div><label>学生名字</label><input name="student_first"></div>
+    <div><label>学生姓氏</label><input name="student_last"></div>
+    <div><label>电子邮箱</label><input type="email" name="email" required></div>
+    <div><label>电话</label><input name="phone"></div>
+    <div><label>WhatsApp（如不同）</label><input name="whatsapp"></div>
+    <div><label>微信号（选填）</label><input name="wechat"></div>
+    <div class="full"><label>您希望的联系方式</label>
+      <div style="display:flex;flex-wrap:wrap;gap:12px 18px;margin-top:8px">
+        <label style="font-size:14px;color:var(--soft);letter-spacing:0;font-weight:400"><input type="checkbox" name="contact_pref" value="Call" style="width:auto;height:auto;margin-right:7px">电话</label>
+        <label style="font-size:14px;color:var(--soft);letter-spacing:0;font-weight:400"><input type="checkbox" name="contact_pref" value="Text" style="width:auto;height:auto;margin-right:7px">短信</label>
+        <label style="font-size:14px;color:var(--soft);letter-spacing:0;font-weight:400"><input type="checkbox" name="contact_pref" value="WhatsApp" style="width:auto;height:auto;margin-right:7px">WhatsApp</label>
+        <label style="font-size:14px;color:var(--soft);letter-spacing:0;font-weight:400"><input type="checkbox" name="contact_pref" value="WeChat" style="width:auto;height:auto;margin-right:7px">微信</label>
+        <label style="font-size:14px;color:var(--soft);letter-spacing:0;font-weight:400"><input type="checkbox" name="contact_pref" value="Email" style="width:auto;height:auto;margin-right:7px">邮箱</label>
+      </div></div>
+    <div><label>学生今秋（2026–27 学年）的年级</label>
+      <select name="status"><option value="">请选择…</option><option>9 年级</option><option>10 年级</option><option>11 年级</option><option>12 年级</option><option>大学转学申请者</option><option>已毕业／间隔年</option><option>更低年级（8 年级及以下）</option></select></div>
+    <div><label>学生就读高中</label><input name="high_school" list="hs" autocomplete="off">
+      <datalist id="hs"><option>Herricks High School</option><option>Roslyn High School</option><option>Great Neck South</option><option>Great Neck North</option><option>Jericho High School</option><option>Syosset High School</option><option>Manhasset High School</option><option>Paul D. Schreiber (Port Washington)</option><option>Stuyvesant High School</option><option>Bronx High School of Science</option><option>Hunter College High School</option><option>Horace Mann School</option><option>Trinity School</option><option>The Dalton School</option><option>Ramaz School</option><option>Wheatley School (East Williston)</option></datalist></div>
+    <div><label>首选语言</label><select name="language"><option>中文</option><option>English</option><option>无偏好</option></select></div>
+    <div><label>您从何处得知我们？</label><select name="referral"><option value="">请选择…</option><option>朋友或家人</option><option>孩子的学校</option><option>现在或过去的客户</option><option>微信群</option><option>GRACE（罗斯林华协）</option><option>网络搜索</option><option>其他</option></select></div>
+    <div class="full"><label>还有什么想让我们了解的吗？（选填）</label><input name="note"></div>
+    <label class="full" style="font-size:14px;color:var(--soft);letter-spacing:0;font-weight:400;display:block"><input type="checkbox" id="consent" name="email_consent" value="yes" style="width:auto;height:auto;margin-right:8px">是的 —— 我愿意接收来自 Quintessence 的邮件：我的 Zoom 链接，以及偶尔的升学洞见。您可随时取消订阅。</label>
+    <button class="full" type="submit">提交</button>
+  </form>
 </div></section>
 
 <!-- CONTACT -->
@@ -410,7 +446,7 @@
   <div class="mbar"><div class="mbar-in">
     <button class="mback" type="button" data-close><span class="chev">←</span><span class="navqi">QI</span><span class="navmark">Quintessence</span></button>
     <div class="mbar-actions">
-      <a class="mreserve" href="#rsvp" data-register>预约名额</a>
+      <a class="mreserve" href="#rsvp">预约名额</a>
       <button class="mclose" type="button" data-close aria-label="关闭">×</button>
     </div>
   </div></div>
@@ -485,7 +521,7 @@
   </article>
 
   <div class="endcta">
-    <a class="btn" href="#rsvp" data-register>报名参加公益讲座 →</a>
+    <a class="btn" href="#rsvp">报名参加公益讲座 →</a>
     <a class="backlink" href="#" data-close>← 返回 Quintessence</a>
   </div>
 </div>
@@ -503,49 +539,13 @@
     <p class="rlede">7月8日（周日）<span class="d">·</span> 晚 8:00 美东时间 <span class="d">·</span> Zoom 线上直播 <span class="d">·</span> 公益</p>
     <div class="formslot" data-formslot aria-label="讲座报名表">
       <!-- QI CENTRAL: embed the Web3Forms <form> here (byte-identical). -->
-      <form action="https://api.web3forms.com/submit" method="POST">
-    <input type="hidden" name="access_key" value="74d99fe3-e078-4796-8c93-920b2c6b221d">
-    <input type="hidden" name="subject" value="New Quintessence Seminar RSVP (ZH)">
-    <input type="hidden" name="from_name" value="Quintessence · qiadmissions.com">
-    <input type="hidden" name="redirect" value="https://qiadmissions.com/thanks.html">
-    <input type="checkbox" name="botcheck" style="display:none !important" tabindex="-1" autocomplete="off">
-    <div class="full"><label>您正在预约的讲座 ——</label>
-      <div style="font-family:var(--serif);font-size:19px;color:var(--accent);padding:4px 0 2px;line-height:1.5">大学真正想要什么：为出众申请者打造的策略体系</div><div style="font-size:13px;color:var(--soft);margin-top:4px">7月12日（周日）· 晚 8:00 美东时间 · Zoom 线上直播</div>
-      <label style="display:block;font-size:14px;color:var(--soft);margin-top:10px;letter-spacing:0;font-weight:400"><input type="checkbox" name="addon_consult" value="yes" style="width:auto;height:auto;margin-right:8px">我也希望预约一次私人咨询，尽早开始</label>
-      <label style="display:block;font-size:14px;color:var(--soft);margin-top:6px;letter-spacing:0;font-weight:400"><input type="checkbox" name="addon_aoe" value="yes" style="width:auto;height:auto;margin-right:8px">请将我加入下一期"文书的艺术"课程的候补名单</label>
-    </div>
-    <div><label>家长名字</label><input name="parent_first" required></div>
-    <div><label>家长姓氏</label><input name="parent_last" required></div>
-    <div><label>学生名字</label><input name="student_first"></div>
-    <div><label>学生姓氏</label><input name="student_last"></div>
-    <div><label>电子邮箱</label><input type="email" name="email" required></div>
-    <div><label>电话</label><input name="phone"></div>
-    <div><label>WhatsApp（如不同）</label><input name="whatsapp"></div>
-    <div><label>微信号（选填）</label><input name="wechat"></div>
-    <div class="full"><label>您希望的联系方式</label>
-      <div style="display:flex;flex-wrap:wrap;gap:12px 18px;margin-top:8px">
-        <label style="font-size:14px;color:var(--soft);letter-spacing:0;font-weight:400"><input type="checkbox" name="contact_pref" value="Call" style="width:auto;height:auto;margin-right:7px">电话</label>
-        <label style="font-size:14px;color:var(--soft);letter-spacing:0;font-weight:400"><input type="checkbox" name="contact_pref" value="Text" style="width:auto;height:auto;margin-right:7px">短信</label>
-        <label style="font-size:14px;color:var(--soft);letter-spacing:0;font-weight:400"><input type="checkbox" name="contact_pref" value="WhatsApp" style="width:auto;height:auto;margin-right:7px">WhatsApp</label>
-        <label style="font-size:14px;color:var(--soft);letter-spacing:0;font-weight:400"><input type="checkbox" name="contact_pref" value="WeChat" style="width:auto;height:auto;margin-right:7px">微信</label>
-        <label style="font-size:14px;color:var(--soft);letter-spacing:0;font-weight:400"><input type="checkbox" name="contact_pref" value="Email" style="width:auto;height:auto;margin-right:7px">邮箱</label>
-      </div></div>
-    <div><label>学生今秋（2026–27 学年）的年级</label>
-      <select name="status"><option value="">请选择…</option><option>9 年级</option><option>10 年级</option><option>11 年级</option><option>12 年级</option><option>大学转学申请者</option><option>已毕业／间隔年</option><option>更低年级（8 年级及以下）</option></select></div>
-    <div><label>学生就读高中</label><input name="high_school" list="hs" autocomplete="off">
-      <datalist id="hs"><option>Herricks High School</option><option>Roslyn High School</option><option>Great Neck South</option><option>Great Neck North</option><option>Jericho High School</option><option>Syosset High School</option><option>Manhasset High School</option><option>Paul D. Schreiber (Port Washington)</option><option>Stuyvesant High School</option><option>Bronx High School of Science</option><option>Hunter College High School</option><option>Horace Mann School</option><option>Trinity School</option><option>The Dalton School</option><option>Ramaz School</option><option>Wheatley School (East Williston)</option></datalist></div>
-    <div><label>首选语言</label><select name="language"><option>中文</option><option>English</option><option>无偏好</option></select></div>
-    <div><label>您从何处得知我们？</label><select name="referral"><option value="">请选择…</option><option>朋友或家人</option><option>孩子的学校</option><option>现在或过去的客户</option><option>微信群</option><option>GRACE（罗斯林华协）</option><option>网络搜索</option><option>其他</option></select></div>
-    <div class="full"><label>还有什么想让我们了解的吗？（选填）</label><input name="note"></div>
-    <label class="full" style="font-size:14px;color:var(--soft);letter-spacing:0;font-weight:400;display:block"><input type="checkbox" id="consent" name="email_consent" value="yes" style="width:auto;height:auto;margin-right:8px">是的 —— 我愿意接收来自 Quintessence 的邮件：我的 Zoom 链接，以及偶尔的升学洞见。您可随时取消订阅。</label>
-    <button class="full" type="submit">提交</button>
-  </form>
+      <div class="slotnote">讲座报名表将嵌入此处。</div>
     </div>
   </div>
 </div>
 
 <script>
-  (function(){ var f=document.querySelector('.formslot form'); if(!f) return; var c=document.getElementById('consent'); var done=false;
+  (function(){ var f=document.querySelector('.rsvp form'); if(!f) return; var c=document.getElementById('consent'); var done=false;
     f.addEventListener('input', function(){ if(!done && c){ c.checked=true; done=true; } }); })();
   (function(){ var t=document.getElementById('crestTrack'); if(t){ t.innerHTML += t.innerHTML; } })();
   (function(){
