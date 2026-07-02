@@ -1,0 +1,523 @@
+<!doctype html>
+<!-- Quintessence landing · GRACE 中文版 (/grace-zh) — crimson (auspicious red) GRACE variant, translated to Simplified Chinese for the Chinese-community audience. Type: Cormorant (wordmark) + Noto Serif SC (Chinese headings/reading) + Noto Sans SC (Chinese UI). Transfer-friendly. Copy = Chinese translation (anchored to the approved ZH flyer); Web3Forms <form> functional attrs (action, access_key, name=) byte-identical to the EN site — only visible labels translated. NOTE for QI Central: Chinese prose (esp. the method essay + founder bio) should get a native/QI review pass before final launch. -->
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
+<meta name="robots" content="noindex">
+<title>Quintessence · 昆essence — 私人大学升学与申请顾问</title>
+<meta property="og:type" content="website">
+<meta property="og:title" content="Quintessence — 让孩子最真实的自己，被心仪的大学看见">
+<meta property="og:description" content="一家专注的自有升学顾问团队，以策略性方法应对申请，让成果源于设计。免费讲座：7月12日（周日）晚8:00 美东时间。">
+<meta property="og:url" content="https://qiadmissions.com/grace-zh">
+<meta property="og:image" content="https://qiadmissions.com/og-grace-zh.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://qiadmissions.com/og-grace-zh.png">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Hanken+Grotesk:wght@400;500;600;700&family=Noto+Serif+SC:wght@400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;600;700&family=ZCOOL+XiaoWei&display=swap" rel="stylesheet">
+<style>
+  :root{ color-scheme:light; --bg:#f6f4ef; --paper:#fbfaf7; --ink:#191b1f; --soft:#5a5d63; --line:#e2ddd3;
+    --accent:#6d1f2c; --navy:#6d1f2c; /* GRACE: panel token = crimson */ --gold:#9c8049;
+    --gold-on:#e9c88f; --cream:#f2e8d7; --cream-soft:#e8dcc6;
+    /* mixed Latin/CJK stacks: Latin → Cormorant/EB/Hanken, Chinese → Noto Serif/Sans SC */
+    --serif:'Cormorant Garamond','Noto Serif SC',Georgia,serif; --body:'EB Garamond','Noto Serif SC',Georgia,serif; --sans:'Hanken Grotesk','Noto Sans SC',system-ui,-apple-system,Arial,sans-serif; }
+  *{ box-sizing:border-box; margin:0; padding:0; }
+  html{ scroll-padding-top:63px; background:var(--bg); }
+  @keyframes qpagein{ from{ opacity:0 } to{ opacity:1 } }
+  body{ background:var(--bg); color:var(--ink); font-family:var(--sans); line-height:1.7; animation:qpagein .32s ease both; }
+  .serif{ font-family:var(--serif); font-weight:600; }
+  .wrap{ width:100%; max-width:1060px; margin:0 auto; padding:0 36px; }
+  .col{ max-width:40ch; }
+  .eyebrow{ font-family:var(--serif); font-weight:600; font-size:14px; letter-spacing:.14em; color:var(--gold); }
+  section{ min-height:100vh; min-height:100svh; padding:92px 0; border-bottom:1px solid var(--line); display:flex; flex-direction:column; justify-content:center; }
+  .h2{ font-family:var(--serif); font-weight:600; font-size:clamp(28px,4vw,42px); line-height:1.3; margin-top:22px; }
+  p.body{ font-family:var(--body); font-weight:400; font-size:17px; color:var(--ink); line-height:1.85; margin-top:20px; }
+  p.body.soft{ color:var(--soft); }
+  .btn{ font-size:13.5px; letter-spacing:.08em; text-decoration:none; padding:16px 28px; display:inline-block; transition:background-color .25s ease, color .2s ease; }
+  .btn-dark{ background:var(--ink); color:var(--paper); } .btn-dark:hover{ background:var(--accent); }
+  .tlink{ font-size:13.5px; letter-spacing:.04em; color:var(--ink); text-decoration:none; border-bottom:1px solid var(--line); padding-bottom:3px; transition:color .2s ease, border-color .2s ease; }
+  .tlink:hover{ border-color:var(--accent); color:var(--accent); }
+
+  .topbar{ height:3px; background:var(--gold); }
+  nav{ position:sticky; top:0; z-index:20; background:rgba(246,244,239,.93); -webkit-backdrop-filter:blur(10px); backdrop-filter:blur(10px); border-bottom:1px solid var(--line); }
+  nav .wrap{ display:flex; align-items:center; justify-content:space-between; min-height:62px; gap:12px; flex-wrap:wrap; }
+  .navbrand{ display:flex; align-items:baseline; gap:10px; }
+  .navqi{ font-family:'Cormorant Garamond',serif; font-weight:600; font-size:20px; letter-spacing:.08em; color:var(--accent); }
+  .navmark{ font-family:'Cormorant Garamond',serif; font-weight:600; font-size:21px; }
+  .navlinks{ display:flex; gap:22px; align-items:center; }
+  .navlink{ font-size:14px; letter-spacing:.06em; color:var(--ink); text-decoration:none; transition:color .2s ease; }
+  .navlink:hover{ color:var(--accent); }
+  .navcta{ font-size:14px; letter-spacing:.06em; color:var(--ink); text-decoration:none; border:1px solid var(--line); padding:8px 16px; transition:color .2s ease, background .2s ease, border-color .2s ease; }
+  .navcta:hover{ color:var(--ink); background:var(--gold); border-color:var(--gold); }
+  .navurl{ font-family:'Hanken Grotesk',sans-serif; font-size:13px; letter-spacing:.02em; color:var(--accent); text-decoration:none; font-weight:700; }
+
+  .hero{ min-height:calc(100vh - 63px); min-height:calc(100svh - 63px); display:flex; flex-direction:column; justify-content:center; gap:clamp(40px,7vh,80px); padding:52px 0 0; border-bottom:none; }
+  .heromain{ text-align:left; max-width:1060px; margin:0 auto; width:100%; padding:0 36px; }
+  .heroinner{ border-left:2px solid var(--navy); padding-left:clamp(22px,3.4vw,44px); }
+  .brandhero{ font-family:'Cormorant Garamond',serif; font-weight:600; font-size:clamp(50px,8.4vw,104px); line-height:.98; margin-top:14px; }
+  .defn{ font-family:var(--body); font-size:clamp(16px,2vw,21px); color:var(--soft); line-height:1.7; margin-top:18px; max-width:52ch; }
+  .defn b{ color:var(--ink); font-weight:600; }
+  .defn .en{ font-family:'Cormorant Garamond',serif; font-style:italic; }
+  .herosub{ font-family:var(--body); font-weight:400; font-size:17.5px; color:var(--ink); line-height:1.9; max-width:46ch; margin:24px 0 0; }
+  .herosub b{ color:var(--accent); font-weight:600; }
+  .herocta{ margin-top:36px; display:flex; gap:22px; align-items:center; justify-content:flex-start; flex-wrap:wrap; }
+  .heroproof{ background:var(--ink); border-top:none; padding:24px 0 26px; text-align:left; }
+  .heroproof .inner{ max-width:1060px; margin:0 auto; padding:0 36px; display:flex; align-items:center; gap:clamp(20px,4vw,54px); flex-wrap:wrap; }
+  .heroproof .eyebrow{ flex:0 0 auto; max-width:150px; line-height:1.7; letter-spacing:.1em; color:var(--gold); }
+
+  .marquee{ overflow:hidden; flex:1 1 320px; min-width:0; margin-top:0;
+    -webkit-mask-image:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent);
+    mask-image:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent); }
+  .marquee .track{ display:inline-flex; align-items:center; gap:42px; white-space:nowrap; animation:scroll 95s linear infinite; }
+  .marquee:hover .track{ animation-play-state:paused; }
+  .unit{ display:inline-flex; align-items:center; gap:13px }
+  .marquee .sch{ font-family:var(--serif); font-weight:600; font-size:clamp(21px,2.6vw,29px); color:#fbfaf7; letter-spacing:.02em }
+  .marquee .sep{ color:var(--gold); font-size:19px; opacity:.6 }
+  @keyframes scroll{ from{transform:translateX(0)} to{transform:translateX(-50%)} }
+  @media(prefers-reduced-motion:reduce){ .marquee .track{ animation:none; flex-wrap:wrap; white-space:normal; justify-content:center } }
+
+  .seminar{ background:var(--navy); color:var(--cream); border-bottom:none; padding:74px 0; }
+  .seminar .eyebrow{ color:var(--gold-on); line-height:1.7; }
+  .seminar .title{ font-family:var(--serif); font-weight:600; color:#fff; font-size:clamp(30px,4.4vw,50px); line-height:1.2; margin-top:18px; }
+  .seminar .title .sub{ display:block; color:var(--cream-soft); font-size:clamp(21px,3vw,32px); margin-top:8px; font-weight:500; }
+  .seminar .covhead{ margin-top:30px; font-size:13px; letter-spacing:.12em; color:var(--gold-on); font-weight:600; }
+  .seminar .covhead + .learn{ margin-top:14px; }
+  .seminar .learn{ margin-top:30px; display:grid; gap:0; max-width:48ch; }
+  .seminar .learn .it{ display:flex; align-items:baseline; gap:16px; font-family:var(--body); font-size:16.5px; color:var(--cream); line-height:1.7; padding:12px 0; border-top:1px solid rgba(255,255,255,.15); }
+  .seminar .learn .it b{ font-family:'Cormorant Garamond',serif; color:var(--gold-on); font-weight:600; }
+  .seminar .facts{ margin-top:36px; font-family:var(--serif); font-weight:600; font-size:clamp(20px,2.4vw,24px); letter-spacing:.02em; color:#fbfaf7; line-height:1.5; }
+  .seminar .facts .fp{ white-space:nowrap; }
+  .seminar .facts .d{ color:var(--gold-on); margin:0 10px; font-weight:600; }
+  .seminar .row{ margin-top:32px; }
+  .seminar .btn-light{ background:#fff; color:var(--accent); }
+
+  .method{ padding:80px 0; }
+  .method .intro{ font-family:var(--body); font-weight:400; font-size:17px; color:var(--ink); line-height:1.9; max-width:44ch; margin-top:16px; }
+  .method .intro b{ color:var(--accent); font-weight:600; }
+  .steps{ margin-top:26px; }
+  .step{ display:grid; grid-template-columns:150px 1fr; gap:30px; padding:18px 0; border-top:1px solid var(--line); align-items:baseline; }
+  .step:last-of-type{ border-bottom:1px solid var(--line); }
+  .step .dot{ display:inline-block; width:13px; height:13px; border-radius:50%; }
+  .step .steplabel .dot{ display:inline-block; margin:0 12px 0 0; vertical-align:middle; position:relative; top:-1px; }
+  .step .lbl{ font-family:var(--serif); font-size:20px; line-height:1.3; white-space:nowrap; }
+  .step .elem{ font-weight:600; }
+  .step .sep2{ color:var(--gold); margin:0 6px; }
+  .step .phase{ font-weight:500; color:var(--soft); }
+  .step .txt{ font-family:var(--body); font-weight:400; font-size:16px; line-height:1.85; }
+  .step .deliv{ display:block; margin-top:8px; font-family:var(--serif); font-weight:600; font-size:15px; color:var(--navy); }
+  .seehow{ margin-top:26px; }
+  .differ{ margin-top:28px; display:flex; flex-wrap:wrap; gap:12px 26px; }
+  .differ span{ font-size:14.5px; color:var(--soft); } .differ b{ color:var(--ink); font-weight:600; }
+
+  .founder .team{ margin-top:34px; border-top:1px solid var(--line); padding-top:26px; }
+  .founder .team h3{ font-family:var(--serif); font-weight:600; font-size:22px; }
+  .founder .team p{ font-family:var(--body); font-weight:400; font-size:16.5px; color:var(--soft); line-height:1.85; margin-top:10px; }
+
+  .rsvp{ background:var(--paper); }
+  .rsvp .lede{ font-family:var(--body); font-weight:400; font-size:17px; color:var(--soft); line-height:1.85; max-width:48ch; margin-top:16px; }
+  form{ display:grid; grid-template-columns:1fr 1fr; gap:18px; margin-top:38px; max-width:680px; }
+  .full{ grid-column:1/-1; }
+  label{ font-size:12.5px; letter-spacing:.04em; color:var(--soft); display:block; margin-bottom:8px; }
+  input, select{ width:100%; height:48px; font-size:15px; font-family:var(--sans); padding:0 14px; background:#fff; border:1px solid var(--line); color:var(--ink); border-radius:0; }
+  input:focus, select:focus{ outline:none; border-color:var(--navy); }
+  select{ appearance:none; -webkit-appearance:none; -moz-appearance:none; padding-right:38px;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='none' stroke='%235a5d63' stroke-width='1.5' d='M1 1l5 5 5-5'/%3E%3C/svg%3E");
+    background-repeat:no-repeat; background-position:right 14px center; }
+  input[type=checkbox]{ width:auto; height:auto; padding:0; border:0; vertical-align:middle; accent-color:var(--accent); }
+  button{ font-size:14px; letter-spacing:.08em; background:var(--ink); color:var(--paper); border:none; height:54px; cursor:pointer; font-family:var(--sans); transition:background-color .25s ease; }
+  button:hover{ background:var(--accent); }
+
+  .contact{ min-height:auto; padding:88px 0; }
+  .contacth{ font-family:var(--serif); font-weight:600; font-size:clamp(23px,2.8vw,32px); line-height:1.4; color:var(--ink); margin-top:14px; max-width:22ch; }
+  .contact .mailto{ display:inline-block; margin-top:22px; font-family:'Cormorant Garamond',serif; font-weight:600; font-size:clamp(22px,2.6vw,30px); color:var(--accent); text-decoration:none; border-bottom:1px solid var(--line); padding-bottom:4px; letter-spacing:.01em; }
+  .contact .mailto:hover{ border-color:var(--accent); }
+  .contact .contactsub{ margin-top:22px; font-size:13px; letter-spacing:.08em; color:var(--soft); }
+
+  footer{ padding:48px 0 64px; border-bottom:none; }
+  footer .wrap{ display:flex; justify-content:space-between; align-items:flex-end; gap:24px; flex-wrap:wrap; }
+  .fmark{ font-family:'Cormorant Garamond',serif; font-weight:600; font-size:24px; }
+  .fdesc{ font-size:12.5px; letter-spacing:.06em; color:var(--soft); margin-top:8px; }
+  .fmeta{ font-size:13px; color:var(--soft); line-height:1.9; text-align:right; }
+  .qimono{ font-family:'Cormorant Garamond',serif; font-weight:600; letter-spacing:.1em; border:1px solid var(--line); padding:3px 9px; color:var(--accent); }
+
+  @media(max-width:760px){
+    html{ scroll-padding-top:57px; }
+    section{ padding:56px 0; } .wrap{ padding:0 24px; }
+    .hide-sm{ display:none; }
+    nav .wrap{ min-height:56px; gap:10px 16px; }
+    .navqi{ font-size:17px; } .navmark{ font-size:18px; }
+    .navlinks{ gap:18px; } .navlink{ font-size:14px; } .navcta{ font-size:14px; padding:7px 13px; }
+    .hero{ justify-content:flex-start; gap:0; padding:0; min-height:calc(100vh - 59px); min-height:calc(100svh - 59px); }
+    .heromain{ flex:1 1 auto; display:flex; flex-direction:column; justify-content:center; padding:26px 24px; }
+    .brandhero{ font-size:clamp(42px,12.5vw,60px); margin-top:10px; }
+    .defn{ font-size:15px; margin-top:12px; }
+    .herosub{ font-size:16px; line-height:1.85; margin-top:16px; }
+    .herocta{ margin-top:22px; gap:14px; }
+    .heroproof{ flex:0 0 auto; padding:18px 0 20px; }
+    .heroproof .inner{ gap:8px 14px; padding:0 24px; }
+    .heroproof .eyebrow{ flex-basis:100%; max-width:none; }
+    .marquee .sch{ font-size:21px; }
+    .step{ grid-template-columns:1fr; gap:6px; }
+    .step .lbl{ white-space:normal; }
+    form{ grid-template-columns:1fr; } .fmeta{ text-align:left; }
+  }
+
+  /* ===== 方法 — seamless in-page reading panel ===== */
+  #site{ transition:transform .52s cubic-bezier(.4,0,.15,1); }
+  .method-open #site{ transform:translateX(-34px); }
+  #methodOverlay{ position:fixed; inset:0; z-index:200; background:var(--bg); overflow-y:auto; overflow-x:hidden; -webkit-overflow-scrolling:touch;
+    transform:translateX(100%); transition:transform .52s cubic-bezier(.4,0,.15,1); display:none; box-shadow:-34px 0 70px rgba(109,31,44,.18); }
+  .method-open #methodOverlay{ transform:translateX(0); }
+  #methodOverlay .mtop{ height:3px; background:var(--gold); }
+  #methodOverlay .mbar{ position:sticky; top:0; z-index:5; background:rgba(246,244,239,.92); -webkit-backdrop-filter:blur(10px); backdrop-filter:blur(10px); border-bottom:1px solid var(--line); }
+  #methodOverlay .mbar-in{ max-width:1040px; margin:0 auto; padding:0 28px; min-height:60px; display:flex; align-items:center; justify-content:space-between; gap:12px; }
+  #methodOverlay .mback{ display:inline-flex; align-items:center; gap:9px; background:none; border:0; cursor:pointer; color:var(--ink); padding:8px 0; }
+  #methodOverlay:focus{ outline:none; }
+  #methodOverlay .mback .chev{ color:var(--accent); font-size:19px; transition:transform .25s ease; }
+  #methodOverlay .mback:hover .chev{ transform:translateX(-4px); }
+  #methodOverlay .mback .navqi{ font-family:'Cormorant Garamond',serif; font-weight:600; font-size:20px; letter-spacing:.08em; color:var(--accent); }
+  #methodOverlay .mback .navmark{ font-family:'Cormorant Garamond',serif; font-weight:600; font-size:21px; }
+  #methodOverlay .mclose{ background:none; border:0; cursor:pointer; font-size:25px; line-height:1; color:var(--soft); width:42px; height:42px; border-radius:50%; display:flex; align-items:center; justify-content:center; }
+  #methodOverlay .mclose:hover{ color:var(--accent); background:rgba(0,0,0,.045); }
+  #methodOverlay .mbar-actions{ display:flex; align-items:center; gap:16px; }
+  #methodOverlay .mreserve{ font-size:13px; letter-spacing:.06em; color:var(--ink); text-decoration:none; border:1px solid var(--line); padding:9px 16px; transition:color .2s ease, border-color .2s ease, background-color .2s ease; }
+  #methodOverlay .mreserve:hover{ color:#fff; background:var(--accent); border-color:var(--accent); }
+  #methodOverlay .mhero{ min-height:calc(100svh - 66px); display:flex; flex-direction:column; justify-content:center; padding:52px 0 46px; border-bottom:1px solid var(--line); }
+  #methodOverlay .mheromain{ max-width:680px; margin:0 auto; width:100%; padding:0 28px; }
+  #methodOverlay .mheroinner{ border-left:2px solid var(--navy); padding-left:clamp(20px,3vw,38px); }
+  #methodOverlay .eyebrow{ font-size:14px; letter-spacing:.12em; color:var(--gold); }
+  #methodOverlay h1{ font-family:var(--serif); font-weight:600; font-size:clamp(34px,5.5vw,54px); line-height:1.25; margin:16px 0 0; }
+  #methodOverlay .standfirst{ font-family:var(--body); font-weight:400; font-size:18px; line-height:1.9; color:var(--soft); margin-top:20px; }
+  #methodOverlay .article{ max-width:680px; margin:0 auto; padding:64px 28px 40px; }
+  #methodOverlay h2{ font-family:var(--serif); font-weight:600; font-size:clamp(24px,3.4vw,31px); line-height:1.35; margin:52px 0 0; }
+  #methodOverlay p{ font-family:var(--body); font-weight:400; font-size:17px; line-height:1.95; margin-top:16px; }
+  #methodOverlay p.soft{ color:var(--soft); } #methodOverlay strong{ font-weight:600; }
+  #methodOverlay .elements{ margin-top:24px; }
+  #methodOverlay .el{ padding:24px 0; border-top:1px solid var(--line); display:flex; gap:18px; align-items:flex-start; }
+  #methodOverlay .el:last-child{ border-bottom:1px solid var(--line); }
+  #methodOverlay .el .dot{ width:13px; height:13px; border-radius:50%; flex:0 0 auto; margin-top:9px; }
+  #methodOverlay .el .body .ellabel{ font-family:var(--serif); font-size:20px; line-height:1.3; }
+  #methodOverlay .el .body .elem{ font-weight:600; }
+  #methodOverlay .el .body .sep2{ color:var(--gold); margin:0 6px; }
+  #methodOverlay .el .body .phase{ font-weight:500; color:var(--soft); }
+  #methodOverlay .el .body p{ margin-top:8px; font-size:16px; line-height:1.85; }
+  #methodOverlay .el .bul{ list-style:none; margin-top:10px; }
+  #methodOverlay .el .bul li{ position:relative; padding-left:18px; font-family:var(--body); font-weight:400; font-size:15.5px; color:var(--soft); margin-top:6px; line-height:1.8; }
+  #methodOverlay .el .bul li:before{ content:"\2022"; position:absolute; left:2px; color:var(--gold); font-size:15px; }
+  #methodOverlay .aside{ background:var(--paper); border:1px solid var(--line); padding:26px 30px; margin:40px 0; }
+  #methodOverlay .aside .k{ font-size:12.5px; letter-spacing:.1em; color:var(--gold); }
+  #methodOverlay .aside p{ font-family:var(--serif); font-size:20px; line-height:1.7; margin-top:10px; color:var(--navy); }
+  #methodOverlay .endcta{ text-align:center; padding:46px 0 96px; }
+  #methodOverlay .endcta .btn{ font-size:13.5px; letter-spacing:.06em; text-decoration:none; padding:16px 30px; display:inline-block; background:var(--ink); color:var(--paper); cursor:pointer; }
+  #methodOverlay .endcta .btn:hover{ background:var(--accent); }
+  #methodOverlay .backlink{ display:inline-block; margin-top:22px; font-size:13px; letter-spacing:.04em; color:var(--soft); text-decoration:none; cursor:pointer; }
+  #methodOverlay .backlink:hover{ color:var(--accent); }
+  @keyframes qelrise{ from{ opacity:0; transform:translateY(16px) } to{ opacity:1; transform:none } }
+  .method-open #methodOverlay .mheroinner{ animation:qelrise .6s cubic-bezier(.2,.7,.2,1) both; animation-delay:.08s; }
+  .method-open #methodOverlay .el{ animation:qelrise .55s cubic-bezier(.2,.7,.2,1) both; }
+  .method-open #methodOverlay .el:nth-child(1){ animation-delay:.10s; }
+  .method-open #methodOverlay .el:nth-child(2){ animation-delay:.17s; }
+  .method-open #methodOverlay .el:nth-child(3){ animation-delay:.24s; }
+  .method-open #methodOverlay .el:nth-child(4){ animation-delay:.31s; }
+  .method-open #methodOverlay .el:nth-child(5){ animation-delay:.38s; }
+  @media(prefers-reduced-motion:reduce){ #site, #methodOverlay, .method-open #methodOverlay .el, .method-open #methodOverlay .mheroinner{ transition:none !important; animation:none !important; } }
+  @media(max-width:760px){
+    .method-open #site{ transform:none; }
+    #methodOverlay .mbar-in{ padding:0 20px; min-height:54px; }
+    #methodOverlay .mheromain{ padding:0 22px; } #methodOverlay h1{ font-size:32px; }
+    #methodOverlay .article{ padding:48px 22px 30px; } #methodOverlay p{ font-size:17.5px; }
+  }
+</style>
+</head>
+<body>
+
+<div id="site">
+<div class="topbar"></div>
+<nav><div class="wrap">
+  <div class="navbrand"><span class="navqi">QI</span><span class="navmark">Quintessence</span></div>
+  <div class="navlinks">
+    <a class="navurl hide-sm" href="https://qiadmissions.com">qiadmissions.com</a>
+    <a class="navlink" href="#method" data-method>方法</a>
+    <a class="navcta" href="#rsvp">预约名额</a>
+    <a class="navlink hide-sm" href="#contact">联系</a>
+  </div>
+</div></nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="heromain">
+    <div class="heroinner">
+    <div class="eyebrow">私人大学升学与申请顾问</div>
+    <div class="brandhero">Quintessence</div>
+    <p class="defn"><span class="en">quin·tes·sence</span> ——<b>第五元素</b>，万物中最纯粹的精华；一个人最真实本质的呈现。</p>
+    <p class="herosub">我们是一家专注的自有升学顾问团队，以策略性的方法应对申请 ——<b>让成果源于精心的设计。</b>我们帮助您的孩子成为最真实的自己，并赢得心仪大学的录取。</p>
+    <div class="herocta">
+      <a class="btn btn-dark" href="#seminar">报名 —— 免费讲座 · 7月12日</a>
+      <a class="tlink" href="#method" data-method>了解我们的方法 →</a>
+    </div>
+    </div>
+  </div>
+  <div class="heroproof">
+    <div class="inner">
+    <div class="eyebrow">我们学生的录取院校</div>
+    <div class="marquee" aria-label="我们学生的录取院校">
+      <div class="track" id="crestTrack">
+        <span class="unit"><span class="sch">哈佛大学</span></span><span class="sep">·</span>
+        <span class="unit"><span class="sch">耶鲁大学</span></span><span class="sep">·</span>
+        <span class="unit"><span class="sch">哥伦比亚大学</span></span><span class="sep">·</span>
+        <span class="unit"><span class="sch">宾夕法尼亚大学</span></span><span class="sep">·</span>
+        <span class="unit"><span class="sch">康奈尔大学</span></span><span class="sep">·</span>
+        <span class="unit"><span class="sch">范德堡大学</span></span><span class="sep">·</span>
+        <span class="unit"><span class="sch">加州大学伯克利分校</span></span><span class="sep">·</span>
+        <span class="unit"><span class="sch">加州理工学院</span></span><span class="sep">·</span>
+        <span class="unit"><span class="sch">西北大学</span></span><span class="sep">·</span>
+        <span class="unit"><span class="sch">北卡罗来纳大学</span></span><span class="sep">·</span>
+        <span class="unit"><span class="sch">约翰·霍普金斯大学</span></span><span class="sep">·</span>
+        <span class="unit"><span class="sch">波士顿大学</span></span><span class="sep">·</span>
+        <span class="unit"><span class="sch">巴布森学院 · 全额奖学金</span></span><span class="sep">·</span>
+      </div>
+    </div>
+    </div>
+  </div>
+</header>
+
+<!-- SEMINAR -->
+<section class="seminar" id="seminar"><div class="wrap">
+  <div class="col">
+  <div class="eyebrow">免费晚间讲座<br>面向家长与学生 · 9 至 12 年级，以及转学申请者</div>
+  <div class="title serif">大学真正想要什么<span class="sub">为出众申请者打造的策略体系</span></div>
+  <div class="covhead">讲座内容</div>
+  <div class="learn">
+    <div class="it"><b>01</b> 大学真正在寻找什么</div>
+    <div class="it"><b>02</b> 驱动录取的深层动因</div>
+    <div class="it"><b>03</b> 策略与真实的罕见统一</div>
+    <div class="it"><b>04</b> 让申请者脱颖而出的关键</div>
+    <div class="it"><b>05</b> Quintessence 方法：<br>QI 五阶体系与文书的艺术</div>
+  </div>
+  </div>
+  <div class="facts"><span class="fp">7月12日（周日）</span> <span class="d">·</span> <span class="fp">晚 8:00 美东时间</span> <span class="d">·</span> <span class="fp">Zoom 线上直播</span> <span class="d">·</span> <span class="fp">免费</span></div>
+  <div class="row"><a class="btn btn-light" href="#rsvp">预约名额 →</a></div>
+</div></section>
+
+<!-- OUR APPROACH -->
+<section class="method" id="method"><div class="wrap">
+  <div class="eyebrow">我们的方法</div>
+  <div class="h2 serif">清晰的全局、真正的策略，以及一份无可置疑属于他们自己的申请。</div>
+  <p class="intro">出众的成果并非源于运气，而是来自<b>QI 五阶体系</b>—— 一套可靠的流程，从最开放的阶段依次推进到最终成稿。它以有意为之的策略，取代了申请过程中的焦虑与盲目：<b>让成果源于设计。</b></p>
+  <div class="steps">
+    <div class="step">
+      <div class="steplabel"><span class="dot" style="background:radial-gradient(circle at 34% 30%,#ffffff,#eef1f4);border:1px solid #bcc4cc;box-shadow:0 0 6px 1px rgba(120,140,165,.45)"></span><span class="lbl"><i class="elem" style="color:#444b54">空</i> <span class="sep2">·</span> <span class="phase">立意</span></span></div>
+      <div class="txt">我们厘清大学真正看重什么，以及您孩子拥有的一切素材。选校名单也在此成形。<span class="deliv">申请者 DNA 档案 · 选校名单 · 策略规划</span></div></div>
+    <div class="step">
+      <div class="steplabel"><span class="dot" style="background:radial-gradient(circle at 34% 30%,#ef8871,#b3322a);box-shadow:0 0 7px 1px rgba(179,50,42,.5)"></span><span class="lbl"><i class="elem" style="color:#b3322a">火</i> <span class="sep2">·</span> <span class="phase">聚焦</span></span></div>
+      <div class="txt">我们找到核心 —— 将整段人生串联成一个清晰故事的那条真实主线 —— 并将它转化为每篇文书的蓝图。<span class="deliv">一条定义性的叙事主线 · 每篇文书的写作蓝图</span></div></div>
+    <div class="step">
+      <div class="steplabel"><span class="dot" style="background:radial-gradient(circle at 34% 30%,#7ab2e6,#2f6fb0);box-shadow:0 0 7px 1px rgba(47,111,176,.5)"></span><span class="lbl"><i class="elem" style="color:#2f6fb0">水</i> <span class="sep2">·</span> <span class="phase">流淌</span></span></div>
+      <div class="txt">您的孩子依据蓝图，用自己的声音书写文书。我们引导，他们书写。<span class="deliv">完全属于他们自己的初稿</span></div></div>
+    <div class="step">
+      <div class="steplabel"><span class="dot" style="background:radial-gradient(circle at 34% 30%,#7cc79a,#3f8a5b);box-shadow:0 0 7px 1px rgba(63,138,91,.5)"></span><span class="lbl"><i class="elem" style="color:#3f8a5b">气</i> <span class="sep2">·</span> <span class="phase">精修</span></span></div>
+      <div class="txt">我们强化结构 —— 每篇文书是否各尽其责、听来如您孩子本人，并作为一份完整申请彼此呼应？<span class="deliv">修订稿</span></div></div>
+    <div class="step">
+      <div class="steplabel"><span class="dot" style="background:radial-gradient(circle at 34% 30%,#e2c78f,#9c8049);box-shadow:0 0 7px 1px rgba(156,128,73,.5)"></span><span class="lbl"><i class="elem" style="color:#9c8049">土</i> <span class="sep2">·</span> <span class="phase">定稿</span></span></div>
+      <div class="txt">最后一程：精细打磨，满足每一项要求，准备提交。我们称之为"定稿"，而非"完成"—— 不到真正就绪，工作就未结束。<span class="deliv">可提交的最终申请</span></div></div>
+  </div>
+  <div class="differ">
+    <span><b>真实而富有策略。</b></span>
+    <span><b>完整的自有体系。</b></span>
+    <span><b>以卓越取胜。</b></span>
+    <span><b>每次只专注一位学生。</b></span>
+  </div>
+  <div class="seehow"><a class="tlink" href="#method" data-method>查看完整方法 →</a></div>
+</div></section>
+
+<!-- FOUNDER + TEAM -->
+<section class="founder" id="founder"><div class="wrap"><div class="col">
+  <div class="eyebrow">总监兼创始人</div>
+  <div class="h2 serif">Adam Obedian</div>
+  <p class="body">十余年间，Adam 与一位又一位申请者并肩工作，打磨出了 Quintessence 方法与 QI 流程 —— 起初是在自己求学的尾声为同窗提供建议，随后在过去六年里全心投入 —— 引导每一位学生走向心仪的大学。他曾在哥伦比亚大学研习哲学与戏剧，精进写作、叙事与讲故事的功力：这正是一份出众申请的核心所在。</p>
+  <div class="team">
+    <h3 class="serif">我们的团队</h3>
+    <p>当您选择 Quintessence，您所托付的是一家机构与一套体系，而非某一个人的时间。一支由写作者与策略师组成的专业团队，受过 QI 流程的训练、由 Adam 亲自指导，支撑着每一份申请，并恪守同一套严苛标准。您所托付的，是我们所构建的一切：流程、团队，以及它所带来的成果。</p>
+  </div>
+</div></div></section>
+
+<!-- RSVP form — functional attrs identical to the EN site; only visible labels translated -->
+<section class="rsvp" id="rsvp"><div class="wrap">
+  <div class="eyebrow">预约名额</div>
+  <div class="h2 serif">预留您的讲座席位。</div>
+  <p class="lede">7月12日（周日）· 晚 8:00 美东时间 · Zoom 线上直播。请告诉我们将链接发送至何处。</p>
+  <form action="https://api.web3forms.com/submit" method="POST">
+    <input type="hidden" name="access_key" value="74d99fe3-e078-4796-8c93-920b2c6b221d">
+    <input type="hidden" name="subject" value="New Quintessence Seminar RSVP (ZH)">
+    <input type="hidden" name="from_name" value="Quintessence · qiadmissions.com">
+    <input type="hidden" name="redirect" value="https://qiadmissions.com/thanks.html">
+    <input type="checkbox" name="botcheck" style="display:none !important" tabindex="-1" autocomplete="off">
+    <div class="full"><label>您正在预约的讲座 ——</label>
+      <div style="font-family:var(--serif);font-size:19px;color:var(--accent);padding:4px 0 2px;line-height:1.5">大学真正想要什么：为出众申请者打造的策略体系</div><div style="font-size:13px;color:var(--soft);margin-top:4px">7月12日（周日）· 晚 8:00 美东时间 · Zoom 线上直播</div>
+      <label style="display:block;font-size:14px;color:var(--soft);margin-top:10px;letter-spacing:0;font-weight:400"><input type="checkbox" name="addon_consult" value="yes" style="width:auto;height:auto;margin-right:8px">我也希望预约一次私人咨询，尽早开始</label>
+      <label style="display:block;font-size:14px;color:var(--soft);margin-top:6px;letter-spacing:0;font-weight:400"><input type="checkbox" name="addon_aoe" value="yes" style="width:auto;height:auto;margin-right:8px">请将我加入下一期"文书的艺术"课程的候补名单</label>
+    </div>
+    <div><label>家长名字</label><input name="parent_first" required></div>
+    <div><label>家长姓氏</label><input name="parent_last" required></div>
+    <div><label>学生名字</label><input name="student_first"></div>
+    <div><label>学生姓氏</label><input name="student_last"></div>
+    <div><label>电子邮箱</label><input type="email" name="email" required></div>
+    <div><label>电话</label><input name="phone"></div>
+    <div><label>WhatsApp（如不同）</label><input name="whatsapp"></div>
+    <div><label>微信号（选填）</label><input name="wechat"></div>
+    <div class="full"><label>您希望的联系方式</label>
+      <div style="display:flex;flex-wrap:wrap;gap:12px 18px;margin-top:8px">
+        <label style="font-size:14px;color:var(--soft);letter-spacing:0;font-weight:400"><input type="checkbox" name="contact_pref" value="Call" style="width:auto;height:auto;margin-right:7px">电话</label>
+        <label style="font-size:14px;color:var(--soft);letter-spacing:0;font-weight:400"><input type="checkbox" name="contact_pref" value="Text" style="width:auto;height:auto;margin-right:7px">短信</label>
+        <label style="font-size:14px;color:var(--soft);letter-spacing:0;font-weight:400"><input type="checkbox" name="contact_pref" value="WhatsApp" style="width:auto;height:auto;margin-right:7px">WhatsApp</label>
+        <label style="font-size:14px;color:var(--soft);letter-spacing:0;font-weight:400"><input type="checkbox" name="contact_pref" value="WeChat" style="width:auto;height:auto;margin-right:7px">微信</label>
+        <label style="font-size:14px;color:var(--soft);letter-spacing:0;font-weight:400"><input type="checkbox" name="contact_pref" value="Email" style="width:auto;height:auto;margin-right:7px">邮箱</label>
+      </div></div>
+    <div><label>学生今秋（2026–27 学年）的年级</label>
+      <select name="status"><option value="">请选择…</option><option>9 年级</option><option>10 年级</option><option>11 年级</option><option>12 年级</option><option>大学转学申请者</option><option>已毕业／间隔年</option><option>更低年级（8 年级及以下）</option></select></div>
+    <div><label>学生就读高中</label><input name="high_school" list="hs" autocomplete="off">
+      <datalist id="hs"><option>Herricks High School</option><option>Roslyn High School</option><option>Great Neck South</option><option>Great Neck North</option><option>Jericho High School</option><option>Syosset High School</option><option>Manhasset High School</option><option>Paul D. Schreiber (Port Washington)</option><option>Stuyvesant High School</option><option>Bronx High School of Science</option><option>Hunter College High School</option><option>Horace Mann School</option><option>Trinity School</option><option>The Dalton School</option><option>Ramaz School</option><option>Wheatley School (East Williston)</option></datalist></div>
+    <div><label>首选语言</label><select name="language"><option>中文</option><option>English</option><option>无偏好</option></select></div>
+    <div><label>您从何处得知我们？</label><select name="referral"><option value="">请选择…</option><option>朋友或家人</option><option>孩子的学校</option><option>现在或过去的客户</option><option>微信群</option><option>GRACE（罗斯林华协）</option><option>网络搜索</option><option>其他</option></select></div>
+    <div class="full"><label>还有什么想让我们了解的吗？（选填）</label><input name="note"></div>
+    <label class="full" style="font-size:14px;color:var(--soft);letter-spacing:0;font-weight:400;display:block"><input type="checkbox" id="consent" name="email_consent" value="yes" style="width:auto;height:auto;margin-right:8px">是的 —— 我愿意接收来自 Quintessence 的邮件：我的 Zoom 链接，以及偶尔的升学洞见。您可随时取消订阅。</label>
+    <button class="full" type="submit">提交</button>
+  </form>
+</div></section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact"><div class="wrap"><div class="col">
+  <div class="eyebrow">联系我们</div>
+  <div class="contacth serif">如有咨询，或希望安排一次私人交流。</div>
+  <a class="mailto" href="mailto:qiadmissions@gmail.com?subject=%E5%92%A8%E8%AF%A2%20%C2%B7%20Quintessence">qiadmissions@gmail.com</a>
+  <div class="contactsub">预约制 · 提供中文沟通</div>
+</div></div></section>
+
+<footer><div class="wrap">
+  <div><div class="fmark">Quintessence</div><div class="fdesc">私人大学升学与申请顾问</div></div>
+  <div class="fmeta"><span class="qimono">QI</span><br>qiadmissions.com</div>
+</div></footer>
+</div><!-- /#site -->
+
+<!-- 方法 — seamless in-page reading panel (Chinese) -->
+<div id="methodOverlay" role="dialog" aria-label="方法" tabindex="-1">
+  <div class="mtop"></div>
+  <div class="mbar"><div class="mbar-in">
+    <button class="mback" type="button" data-close><span class="chev">←</span><span class="navqi">QI</span><span class="navmark">Quintessence</span></button>
+    <div class="mbar-actions">
+      <a class="mreserve" href="#rsvp" data-goto="#rsvp">预约名额</a>
+      <button class="mclose" type="button" data-close aria-label="关闭">×</button>
+    </div>
+  </div></div>
+
+  <header class="mhero"><div class="mheromain"><div class="mheroinner">
+    <div class="eyebrow">方法</div>
+    <h1 class="serif">Quintessence 如何运作。</h1>
+    <p class="standfirst">一段关于本机构理念的讲述：我们如何从 9 年级到 12 年级陪伴一位学生，文书的过程本身，以及是什么让这份工作臻于卓越。</p>
+  </div></div></header>
+
+  <article class="article">
+    <h2>名字的由来</h2>
+    <p>Quintessence 意为"第五元素"—— 在古老的宇宙观里，它是超越土、水、气、火之上的纯粹元素，是剥去一切非本质之后所留存的部分。本机构以这一理念命名，而非以某项服务命名，因为工作正是从这里开始：帮助一位学生发现、培养并表达出最深处的、真正的自己。申请，正是让这一切在大学面前变得可见的地方。它是这套理念的表达，而非理念本身。</p>
+    <p>我们把一份申请视为一门艺术，而非一台机器 —— 它由一位学生真实人生的素材构筑而成，而不是照着模板填写的表格。</p>
+
+    <h2>五种元素</h2>
+    <p class="soft">这套方法依次经历五个阶段，由最开放走向最终成稿。它们赋予了这个名字第二层含义 ——<strong>quint-essence</strong>，即五种元素 —— 同样的五个阶段，塑造着一篇文书、整份申请，以及通往申请的那些年。</p>
+    <div class="elements">
+      <div class="el"><span class="dot" style="background:radial-gradient(circle at 34% 30%,#ffffff,#eef1f4);border:1px solid #bcc4cc;box-shadow:0 0 7px 1px rgba(120,140,165,.45)"></span><div class="body">
+        <span class="ellabel"><i class="elem" style="color:#444b54">空</i> <span class="sep2">·</span> <span class="phase">立意</span></span>
+        <p>在落笔之前，我们先构建起完整的全局 —— 全部的背景：这位学生，以及他们所瞄准的大学。这份底稿越丰厚，之后的一切就越真实。</p>
+        <ul class="bul">
+          <li>厘清目标，以及这些大学真正在寻找什么。</li>
+          <li>收集并梳理构成这位学生之所以是他自己的一切。</li>
+          <li>看清全局，并开始搭建合适的选校名单。</li>
+        </ul></div></div>
+      <div class="el"><span class="dot" style="background:radial-gradient(circle at 34% 30%,#ef8871,#b3322a);box-shadow:0 0 8px 1px rgba(179,50,42,.5)"></span><div class="body">
+        <span class="ellabel"><i class="elem" style="color:#b3322a">火</i> <span class="sep2">·</span> <span class="phase">聚焦</span></span>
+        <p>这是整个过程中最重要的思考。我们所汇集的一切，在此凝聚为一套明确的策略，而此后的每一步都由它而来。</p>
+        <ul class="bul">
+          <li>找到那颗"种子"：这位学生的核心所在。</li>
+          <li>规划各篇文书的分工，让每一篇都承载故事的一部分。</li>
+          <li>为每一篇文书搭建写作蓝图。</li>
+        </ul></div></div>
+      <div class="el"><span class="dot" style="background:radial-gradient(circle at 34% 30%,#7ab2e6,#2f6fb0);box-shadow:0 0 8px 1px rgba(47,111,176,.5)"></span><div class="body">
+        <span class="ellabel"><i class="elem" style="color:#2f6fb0">水</i> <span class="sep2">·</span> <span class="phase">流淌</span></span>
+        <p>此时，学生开始书写。手握写作蓝图，这份工作真正属于他们自己 —— 而最真实、最令人惊喜的素材，往往正是在此浮现。</p>
+        <ul class="bul">
+          <li>学生依据写作蓝图，用自己的声音写出初稿。</li>
+          <li>刻意放慢：深度在此显现，而非在仓促之中。</li>
+        </ul></div></div>
+      <div class="el"><span class="dot" style="background:radial-gradient(circle at 34% 30%,#7cc79a,#3f8a5b);box-shadow:0 0 8px 1px rgba(63,138,91,.5)"></span><div class="body">
+        <span class="ellabel"><i class="elem" style="color:#3f8a5b">气</i> <span class="sep2">·</span> <span class="phase">精修</span></span>
+        <p>这是关乎实质与策略的修改，而非标点。我们让每一篇更为有力，并把彼此独立的文书塑造成一份连贯的申请。</p>
+        <ul class="bul">
+          <li>强化结构与策略。</li>
+          <li>确保每一篇各尽其责，整体彼此呼应。</li>
+        </ul></div></div>
+      <div class="el"><span class="dot" style="background:radial-gradient(circle at 34% 30%,#e2c78f,#9c8049);box-shadow:0 0 8px 1px rgba(156,128,73,.5)"></span><div class="body">
+        <span class="ellabel"><i class="elem" style="color:#9c8049">土</i> <span class="sep2">·</span> <span class="phase">定稿</span></span>
+        <p>最后一程，也是实打实的一程：从一份出色的草稿，到真正可以递交之间的那段距离。</p>
+        <ul class="bul">
+          <li>逐字打磨，满足每一项要求。</li>
+          <li>是"定稿"，而非"完成"：出色的草稿，尚不等于完成的定稿。</li>
+        </ul></div></div>
+    </div>
+
+    <h2>从 9 年级到 12 年级</h2>
+    <p>我们陪伴家庭走过整段旅程，而不仅是最后一年。对更年幼的学生而言，这份工作是长期的规划 —— 用数年时间，一步步走向一份有力的申请：课外活动与方向，对"孩子正在成为怎样的人"这一日渐清晰的认识，以及在恰当的时机，一份合适的选校名单。对高年级学生而言，这便是申请本身：从最初的策略到最终提交，在整个申请季中完整运行这套方法。</p>
+    <p>无论哪一种，它都是一套围绕单个学生建立的顾问关系 —— 一段完整的陪伴，而非为某项单一任务临时引入的服务。</p>
+
+    <h2>文书的过程</h2>
+    <p>文书，是大部分可见工作发生的地方。每一篇都从一份计划开始：这篇文书的用意何在、它承载学生故事的哪一部分、又如何与其余部分彼此配合。此后由学生落笔，我们在结构与策略上加以引导，一稿又一稿，直到每一篇各尽其责，并听来无可辩驳地就是他们本人。</p>
+    <p>自始至终，学生都是作者。我们引导，他们书写 —— 这既是品质的要求，也是原则的坚持，因为最有力的申请，正是那份真正属于他们自己的申请。</p>
+
+    <h2>我们的专长</h2>
+    <p>我们最擅长的，胜过一切，是叙事 —— 在一段人生中找到那个真实的故事，并围绕它构筑一份申请。这是一门写作者的手艺，也是本机构的核心。我们以同一套标准要求每一份申请：它须是自己最好的版本，独属于它所归属的那一位学生。以卓越，而非以背景，决出高下。</p>
+    <p>Quintessence 的创始人 Adam Obedian，曾在哥伦比亚大学研习哲学与戏剧。多数家庭从<strong>"文书的艺术"</strong>开始 —— 学生正是在这门课程中，第一次学习这套方法。</p>
+
+    <div class="aside"><div class="k">最终所得</div>
+      <p>一位学生在走完这段过程时，比起初更清晰地理解了自己 —— 以及一份在每一行里，都真正属于他们自己的申请。</p></div>
+  </article>
+
+  <div class="endcta">
+    <a class="btn" href="#rsvp" data-goto="#rsvp">报名参加免费讲座 →</a>
+    <a class="backlink" href="#" data-close>← 返回 Quintessence</a>
+  </div>
+</div>
+
+<script>
+  (function(){ var f=document.querySelector('.rsvp form'); if(!f) return; var c=document.getElementById('consent'); var done=false;
+    f.addEventListener('input', function(){ if(!done && c){ c.checked=true; done=true; } }); })();
+  (function(){ var t=document.getElementById('crestTrack'); if(t){ t.innerHTML += t.innerHTML; } })();
+  (function(){
+    var reduce = matchMedia('(prefers-reduced-motion:reduce)').matches;
+    function ease(t){ return t<.5 ? 4*t*t*t : 1-Math.pow(-2*t+2,3)/2; }
+    function smoothTo(y,dur){ var s=window.pageYOffset, d=y-s, st=null; if(Math.abs(d)<2) return; dur=dur||720; requestAnimationFrame(function f(ts){ if(st===null)st=ts; var p=Math.min((ts-st)/dur,1); window.scrollTo(0, s+d*ease(p)); if(p<1) requestAnimationFrame(f); }); }
+    document.querySelectorAll('#site a[href^="#"]').forEach(function(a){
+      var h=a.getAttribute('href'); if(!h || h.length<2) return;
+      if(a.hasAttribute('data-method')||a.hasAttribute('data-goto')||a.hasAttribute('data-close')) return;
+      a.addEventListener('click',function(e){ var el=document.getElementById(h.slice(1)); if(!el) return; e.preventDefault(); var navH=document.querySelector('nav').getBoundingClientRect().height; var y=el.getBoundingClientRect().top+window.pageYOffset-navH; if(reduce){ window.scrollTo(0,y); } else { smoothTo(y,720); } });
+    });
+  })();
+  (function(){
+    var overlay=document.getElementById('methodOverlay'); if(!overlay) return;
+    var root=document.documentElement, isOpen=false;
+    function hideNow(){ if(!isOpen){ overlay.style.display='none'; } }
+    function onClosedEnd(e){ if(e.target!==overlay || e.propertyName!=='transform') return; overlay.removeEventListener('transitionend',onClosedEnd); hideNow(); }
+    function openMethod(){ if(isOpen) return; isOpen=true; overlay.removeEventListener('transitionend',onClosedEnd); overlay.style.display='block'; overlay.scrollTop=0; document.body.style.overflow='hidden'; requestAnimationFrame(function(){ requestAnimationFrame(function(){ root.classList.add('method-open'); }); }); try{ history.pushState({qm:1},''); }catch(e){} try{ overlay.focus({preventScroll:true}); }catch(e){} }
+    function closeMethod(fromPop){ if(!isOpen) return; isOpen=false; root.classList.remove('method-open'); document.body.style.overflow=''; overlay.addEventListener('transitionend',onClosedEnd); setTimeout(hideNow,640); if(!fromPop && history.state && history.state.qm){ try{ history.back(); }catch(e){} } }
+    function goTo(sel){ var el=document.querySelector(sel); closeMethod(); if(el){ requestAnimationFrame(function(){ requestAnimationFrame(function(){ var navH=document.querySelector('nav').getBoundingClientRect().height; window.scrollTo(0, el.getBoundingClientRect().top + window.pageYOffset - navH); }); }); } }
+    document.querySelectorAll('[data-method]').forEach(function(a){ a.addEventListener('click',function(e){ e.preventDefault(); openMethod(); }); });
+    overlay.querySelectorAll('[data-close]').forEach(function(a){ a.addEventListener('click',function(e){ e.preventDefault(); closeMethod(); }); });
+    overlay.querySelectorAll('[data-goto]').forEach(function(a){ a.addEventListener('click',function(e){ e.preventDefault(); goTo(a.getAttribute('data-goto')); }); });
+    window.addEventListener('popstate',function(){ if(isOpen){ closeMethod(true); } });
+    document.addEventListener('keydown',function(e){ if((e.key==='Escape'||e.key==='Esc') && isOpen){ closeMethod(); } });
+  })();
+</script>
+</body>
+</html>
