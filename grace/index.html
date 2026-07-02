@@ -95,6 +95,9 @@
   .seal{ width:46px; height:46px; flex:0 0 auto }
   .marquee .sch{ font-family:var(--serif); font-weight:600; font-size:clamp(22px,2.8vw,32px); color:#fbfaf7; letter-spacing:.005em }
   .marquee .sep{ color:var(--gold); font-size:19px; opacity:.6 }
+  .marquee .lead{ flex:0 0 auto; width:clamp(140px,16vw,240px); }
+  .u{ white-space:nowrap; }
+  .seminar .learn .it .txt{ flex:1 1 auto; min-width:0; }
   @keyframes scroll{ from{transform:translateX(0)} to{transform:translateX(-50%)} }
   @media(prefers-reduced-motion:reduce){ .marquee .track{ animation:none; flex-wrap:wrap; white-space:normal; justify-content:center } }
 
@@ -109,9 +112,6 @@
   .seminar .learn{ margin-top:30px; display:grid; gap:0; max-width:58ch; }
   .seminar .learn .it{ display:flex; align-items:baseline; gap:16px; font-family:var(--body); font-size:16.5px; color:var(--cream); line-height:1.45; padding:12px 0; border-top:1px solid rgba(255,255,255,.15); }
   .seminar .learn .it b{ font-family:var(--serif); color:var(--gold-on); font-weight:500; }
-  .it > .itln{ flex:1; min-width:0; }
-  .itln .u{ display:block; white-space:nowrap; }
-
   .seminar .facts{ margin-top:36px; font-family:var(--serif); font-weight:600; font-size:clamp(21px,2.5vw,25px); letter-spacing:.005em; color:#fbfaf7; line-height:1.4; }
   .seminar .facts .fp{ white-space:nowrap; }
   .seminar .facts .d{ color:var(--gold-on); margin:0 10px; font-weight:600; }
@@ -305,7 +305,7 @@
   <div class="navlinks" id="navlinks">
     <a class="navurl hide-sm" href="https://qiadmissions.com">qiadmissions.com</a>
     <a class="navcta" href="/grace/method-grace.html" data-method>The Method</a>
-    <a class="navcta" href="#seminar">Reserve</a>
+    <a class="navcta" href="#rsvp">Reserve</a>
     <span class="langtoggle" role="group" aria-label="Language"><a class="lang active" aria-current="page">EN</a><span class="langsep"></span><a class="lang zh" href="/grace-zh">中文</a></span>
   </div>
 </div></nav>
@@ -329,7 +329,7 @@
     <div class="inner">
     <div class="eyebrow">Where our students have been admitted</div>
     <div class="marquee" aria-label="Colleges our students have been admitted to">
-      <div class="track" id="crestTrack">
+      <div class="track" id="crestTrack"><span class="lead" aria-hidden="true"></span>
         <span class="unit"><img class="crest" src="assets/crests/harvard.png" alt="" onerror="this.style.display='none'"><span class="sch">Harvard</span></span><span class="sep">·</span>
         <span class="unit"><img class="crest" src="assets/crests/yale.png" alt="" onerror="this.style.display='none'"><span class="sch">Yale</span></span><span class="sep">·</span>
         <span class="unit"><img class="crest" src="assets/crests/columbia.png" alt="" onerror="this.style.display='none'"><span class="sch">Columbia</span></span><span class="sep">·</span>
@@ -360,7 +360,7 @@
     <div class="it"><b>02</b> The Incentives That Drive Admissions</div>
     <div class="it"><b>03</b> The Rare Unity of Strategy and Authenticity</div>
     <div class="it"><b>04</b> The X-Factor in a Standout Applicant</div>
-    <div class="it"><b>05</b> <span class="itln"><span class="u">The Quintessence Approach:</span> <span class="u">the QI Five-Phase System &amp; Art of the Essay</span></span></div>
+    <div class="it"><b>05</b> <span class="txt"><span class="u">The Quintessence Approach:</span> <span class="u">the QI Five-Phase System</span> <span class="u">&amp; Art of the Essay</span></span></div>
   </div>
   </div>
   <div class="facts"><span class="fp">Sunday, July 12</span> <span class="d">·</span> <span class="fp">8:00 PM EDT</span> <span class="d">·</span> <span class="fp">Live on Zoom</span> <span class="d">·</span> <span class="fp">Complimentary</span></div>
@@ -482,7 +482,7 @@
   <div class="mbar"><div class="mbar-in">
     <button class="mback" type="button" data-close><span class="chev">←</span><span class="navqi">QI</span><span class="navmark">Quintessence</span></button>
     <div class="mbar-actions">
-      <a class="mreserve" href="#seminar" data-goto="#seminar">Reserve</a>
+      <a class="mreserve" href="#rsvp" data-goto="#rsvp">Reserve</a>
       <button class="mclose" type="button" data-close aria-label="Close">×</button>
     </div>
   </div></div>
@@ -578,7 +578,7 @@
   </article>
 
   <div class="endcta">
-    <a class="btn" href="#seminar" data-goto="#seminar">Sign up for the complimentary seminar →</a>
+    <a class="btn" href="#rsvp" data-goto="#rsvp">Sign up for the complimentary seminar →</a>
     <a class="backlink" href="#" data-close>← Back to Quintessence</a>
   </div>
 </div>

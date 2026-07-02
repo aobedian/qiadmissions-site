@@ -98,6 +98,10 @@
   .unit{ display:inline-flex; align-items:center; gap:13px }
   .marquee .sch{ font-family:var(--serif); font-weight:600; font-size:clamp(21px,2.6vw,29px); color:#fbfaf7; letter-spacing:.02em }
   .marquee .sep{ color:var(--gold); font-size:19px; opacity:.6 }
+  .marquee .lead{ flex:0 0 auto; width:clamp(140px,16vw,240px); }
+  .u{ white-space:nowrap; }
+  .seminar .learn .it .txt{ flex:1 1 auto; min-width:0; }
+  .seminar .learn .it .txt .u{ display:block; }
   @keyframes scroll{ from{transform:translateX(0)} to{transform:translateX(-50%)} }
   @media(prefers-reduced-motion:reduce){ .marquee .track{ animation:none; flex-wrap:wrap; white-space:normal; justify-content:center } }
 
@@ -110,9 +114,6 @@
   .seminar .learn{ margin-top:30px; display:grid; gap:0; max-width:48ch; }
   .seminar .learn .it{ display:flex; align-items:baseline; gap:16px; font-family:var(--body); font-size:16.5px; color:var(--cream); line-height:1.7; padding:12px 0; border-top:1px solid rgba(255,255,255,.15); }
   .seminar .learn .it b{ font-family:'Cormorant Garamond',serif; color:var(--gold-on); font-weight:600; }
-  .it > .itln{ flex:1; min-width:0; }
-  .itln .u{ display:block; white-space:nowrap; }
-
   .seminar .facts{ margin-top:36px; font-family:var(--serif); font-weight:600; font-size:clamp(20px,2.4vw,24px); letter-spacing:.02em; color:#fbfaf7; line-height:1.5; }
   .seminar .facts .fp{ white-space:nowrap; }
   .seminar .facts .d{ color:var(--gold-on); margin:0 10px; font-weight:600; }
@@ -301,7 +302,7 @@
   <div class="navlinks" id="navlinks">
     <a class="navurl hide-sm" href="https://qiadmissions.com">qiadmissions.com</a>
     <a class="navcta" href="#method" data-method>方法</a>
-    <a class="navcta" href="#seminar">预约名额</a>
+    <a class="navcta" href="#rsvp">预约名额</a>
     <span class="langtoggle" role="group" aria-label="语言 Language"><a class="lang" href="/grace">EN</a><span class="langsep"></span><a class="lang zh active" aria-current="page">中文</a></span>
   </div>
 </div></nav>
@@ -329,7 +330,7 @@
     <div class="inner">
     <div class="eyebrow">我们学生的录取院校</div>
     <div class="marquee" aria-label="我们学生的录取院校">
-      <div class="track" id="crestTrack">
+      <div class="track" id="crestTrack"><span class="lead" aria-hidden="true"></span>
         <span class="unit"><span class="sch">哈佛大学</span></span><span class="sep">·</span>
         <span class="unit"><span class="sch">耶鲁大学</span></span><span class="sep">·</span>
         <span class="unit"><span class="sch">哥伦比亚大学</span></span><span class="sep">·</span>
@@ -360,7 +361,7 @@
     <div class="it"><b>02</b> 驱动录取的深层动因</div>
     <div class="it"><b>03</b> 策略与真实的罕见统一</div>
     <div class="it"><b>04</b> 让申请者脱颖而出的关键</div>
-    <div class="it"><b>05</b> <span class="itln"><span class="u">Quintessence 方法：</span> <span class="u">QI 五阶体系与文书的艺术</span></span></div>
+    <div class="it"><b>05</b> <span class="txt"><span class="u">Quintessence 方法：</span><wbr><span class="u">QI 五阶体系与文书的艺术</span></span></div>
   </div>
   </div>
   <div class="facts"><span class="fp">7月12日（周日）</span> <span class="d">·</span> <span class="fp">晚 8:00 美东时间</span> <span class="d">·</span> <span class="fp">Zoom 线上直播</span> <span class="d">·</span> <span class="fp">公益</span></div>
@@ -473,7 +474,7 @@
   <div class="mbar"><div class="mbar-in">
     <button class="mback" type="button" data-close><span class="chev">←</span><span class="navqi">QI</span><span class="navmark">Quintessence</span></button>
     <div class="mbar-actions">
-      <a class="mreserve" href="#seminar" data-goto="#seminar">预约名额</a>
+      <a class="mreserve" href="#rsvp" data-goto="#rsvp">预约名额</a>
       <button class="mclose" type="button" data-close aria-label="关闭">×</button>
     </div>
   </div></div>
@@ -548,7 +549,7 @@
   </article>
 
   <div class="endcta">
-    <a class="btn" href="#seminar" data-goto="#seminar">报名参加公益讲座 →</a>
+    <a class="btn" href="#rsvp" data-goto="#rsvp">报名参加公益讲座 →</a>
     <a class="backlink" href="#" data-close>← 返回 Quintessence</a>
   </div>
 </div>
