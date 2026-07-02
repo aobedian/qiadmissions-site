@@ -6,14 +6,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light">
 <meta name="robots" content="noindex">
-<title>Quintessence · 昆essence — 私人大学升学与申请顾问</title>
+<title>坤泰 · Quintessence — 私人大学升学与申请顾问</title>
 <meta property="og:type" content="website">
 <meta property="og:title" content="Quintessence — 让孩子最真实的自己，被心仪的大学看见">
 <meta property="og:description" content="一家专注的自有升学顾问团队，以策略性方法应对申请，让成果源于设计。公益讲座：7月12日（周日）晚8:00 美东时间。">
 <meta property="og:url" content="https://qiadmissions.com/grace-zh">
-<meta property="og:image" content="https://qiadmissions.com/og-grace-zh.png">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://qiadmissions.com/og-grace-zh.png">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
@@ -29,7 +26,7 @@
   *{ box-sizing:border-box; margin:0; padding:0; }
   html{ scroll-padding-top:63px; background:var(--bg); }
   @keyframes qpagein{ from{ opacity:0 } to{ opacity:1 } }
-  body{ background:var(--bg); color:var(--ink); font-family:var(--sans); line-height:1.7; animation:qpagein .32s ease both; }
+  body{ background:var(--bg); color:var(--ink); font-family:var(--sans); line-height:1.7; animation:qpagein .5s ease both; }
   .serif{ font-family:var(--serif); font-weight:600; }
   .wrap{ width:100%; max-width:1060px; margin:0 auto; padding:0 36px; }
   .col{ max-width:40ch; }
@@ -48,7 +45,15 @@
   nav .wrap{ display:flex; align-items:center; justify-content:space-between; min-height:62px; gap:12px; flex-wrap:wrap; }
   .navbrand{ display:flex; align-items:baseline; gap:10px; }
   .navqi{ font-family:'Cormorant Garamond',serif; font-weight:600; font-size:20px; letter-spacing:.08em; color:var(--accent); }
-  .navmark{ font-family:'Cormorant Garamond',serif; font-weight:600; font-size:21px; }
+  .navmark{ font-family:'Cormorant Garamond',serif; font-weight:600; font-size:19px; color:var(--ink); }
+  .navcn{ font-family:'Noto Serif SC','PingFang SC',serif; font-weight:600; font-size:20px; letter-spacing:.12em; color:var(--ink); }
+  /* language toggle — hairline + gold, on-brand (no rounded pill) */
+  .langtoggle{ display:inline-flex; align-items:center; gap:9px; }
+  .lang{ font-size:13px; letter-spacing:.08em; color:var(--soft); text-decoration:none; padding-bottom:2px; line-height:1; transition:color .2s ease; }
+  .lang:hover{ color:var(--accent); }
+  .lang.active{ color:var(--ink); border-bottom:1.5px solid var(--gold); }
+  .lang.zh{ font-family:'Noto Serif SC','PingFang SC','Microsoft YaHei','Heiti SC',sans-serif; font-size:14.5px; }
+  .langsep{ width:1px; height:13px; background:var(--line); display:inline-block; }
   .navlinks{ display:flex; gap:22px; align-items:center; }
   .navlink{ font-size:14px; letter-spacing:.06em; color:var(--ink); text-decoration:none; transition:color .2s ease; }
   .navlink:hover{ color:var(--accent); }
@@ -59,7 +64,8 @@
   .hero{ min-height:calc(100vh - 63px); min-height:calc(100svh - 63px); display:flex; flex-direction:column; justify-content:center; gap:clamp(40px,7vh,80px); padding:52px 0 0; border-bottom:none; }
   .heromain{ text-align:left; max-width:1060px; margin:0 auto; width:100%; padding:0 36px; }
   .heroinner{ border-left:2px solid var(--navy); padding-left:clamp(22px,3.4vw,44px); }
-  .brandhero{ font-family:'Cormorant Garamond',serif; font-weight:600; font-size:clamp(50px,8.4vw,104px); line-height:.98; margin-top:14px; }
+  .brandcn{ font-family:'Noto Serif SC','PingFang SC',serif; font-weight:600; font-size:clamp(58px,9.6vw,116px); line-height:1; letter-spacing:.12em; color:var(--ink); margin-top:12px; }
+  .brandhero{ font-family:'Cormorant Garamond',serif; font-weight:600; font-size:clamp(27px,4.2vw,46px); line-height:1; letter-spacing:.1em; color:var(--ink); margin-top:8px; }
   .defn{ font-family:var(--body); font-size:clamp(16px,2vw,21px); color:var(--soft); line-height:1.7; margin-top:18px; max-width:52ch; }
   .defn b{ color:var(--ink); font-weight:600; }
   .defn .en{ font-family:'Cormorant Garamond',serif; font-style:italic; }
@@ -154,7 +160,8 @@
     .navlinks{ gap:18px; } .navlink{ font-size:14px; } .navcta{ font-size:14px; padding:7px 13px; }
     .hero{ justify-content:flex-start; gap:0; padding:0; min-height:calc(100vh - 59px); min-height:calc(100svh - 59px); }
     .heromain{ flex:1 1 auto; display:flex; flex-direction:column; justify-content:center; padding:26px 24px; }
-    .brandhero{ font-size:clamp(42px,12.5vw,60px); margin-top:10px; }
+    .brandcn{ font-size:clamp(48px,15vw,74px); }
+    .brandhero{ font-size:clamp(22px,6vw,32px); margin-top:6px; }
     .defn{ font-size:15px; margin-top:12px; }
     .herosub{ font-size:16px; line-height:1.85; margin-top:16px; }
     .herocta{ margin-top:22px; gap:14px; }
@@ -168,10 +175,10 @@
   }
 
   /* ===== 方法 — seamless in-page reading panel ===== */
-  #site{ transition:transform .52s cubic-bezier(.4,0,.15,1); }
+  #site{ transition:transform .66s cubic-bezier(.4,0,.2,1); }
   .method-open #site{ transform:translateX(-34px); }
   #methodOverlay{ position:fixed; inset:0; z-index:200; background:var(--bg); overflow-y:auto; overflow-x:hidden; -webkit-overflow-scrolling:touch;
-    transform:translateX(100%); transition:transform .52s cubic-bezier(.4,0,.15,1); display:none; box-shadow:-34px 0 70px rgba(109,31,44,.18); }
+    transform:translateX(100%); transition:transform .66s cubic-bezier(.4,0,.2,1); display:none; box-shadow:-34px 0 70px rgba(109,31,44,.18); }
   .method-open #methodOverlay{ transform:translateX(0); }
   #methodOverlay .mtop{ height:3px; background:var(--gold); }
   #methodOverlay .mbar{ position:sticky; top:0; z-index:5; background:rgba(246,244,239,.92); -webkit-backdrop-filter:blur(10px); backdrop-filter:blur(10px); border-bottom:1px solid var(--line); }
@@ -232,19 +239,44 @@
     #methodOverlay .mheromain{ padding:0 22px; } #methodOverlay h1{ font-size:32px; }
     #methodOverlay .article{ padding:48px 22px 30px; } #methodOverlay p{ font-size:17.5px; }
   }
-.navlang{display:inline-flex;align-items:baseline;gap:7px;font-family:'Cormorant Garamond',Georgia,'PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans SC',sans-serif;font-size:16px;letter-spacing:.03em;margin-left:6px}.navlang a{color:var(--soft);text-decoration:none;transition:color .2s ease}.navlang a:hover{color:var(--accent)}.navlang a.on{color:var(--ink);font-weight:600}.navlang .lsep{color:var(--line);font-size:13px}</style>
+  /* ===== Register — seamless in-page panel (继承页面颜色) ===== */
+  .register-open #site{ transform:translateX(-34px); }
+  #registerOverlay{ position:fixed; inset:0; z-index:210; background:var(--bg); overflow-y:auto; overflow-x:hidden; -webkit-overflow-scrolling:touch; transform:translateX(100%); transition:transform .66s cubic-bezier(.4,0,.2,1); display:none; box-shadow:-34px 0 70px rgba(0,0,0,.15); }
+  .register-open #registerOverlay{ transform:translateX(0); }
+  #registerOverlay:focus{ outline:none; }
+  #registerOverlay .rtop{ height:3px; background:var(--gold); }
+  #registerOverlay .rbar{ position:sticky; top:0; z-index:5; background:rgba(246,244,239,.92); -webkit-backdrop-filter:blur(10px); backdrop-filter:blur(10px); border-bottom:1px solid var(--line); }
+  #registerOverlay .rbar-in{ max-width:720px; margin:0 auto; padding:0 28px; min-height:60px; display:flex; align-items:center; justify-content:space-between; gap:12px; }
+  #registerOverlay .rback{ display:inline-flex; align-items:center; gap:9px; background:none; border:0; cursor:pointer; color:var(--ink); padding:8px 0; }
+  #registerOverlay .rback .chev{ color:var(--accent); font-size:19px; transition:transform .25s ease; }
+  #registerOverlay .rback:hover .chev{ transform:translateX(-4px); }
+  #registerOverlay .rback .navqi{ font-family:'Cormorant Garamond',serif; font-weight:600; font-size:20px; letter-spacing:.08em; color:var(--accent); }
+  #registerOverlay .rback .navmark{ font-family:'Cormorant Garamond',serif; font-weight:600; font-size:21px; color:var(--ink); }
+  #registerOverlay .rclose{ background:none; border:0; cursor:pointer; font-size:25px; line-height:1; color:var(--soft); width:42px; height:42px; border-radius:50%; display:flex; align-items:center; justify-content:center; }
+  #registerOverlay .rclose:hover{ color:var(--accent); background:rgba(0,0,0,.045); }
+  #registerOverlay .rwrap{ max-width:720px; margin:0 auto; padding:clamp(40px,7vh,72px) 28px 96px; }
+  #registerOverlay .eyebrow{ font-family:var(--serif); font-weight:600; font-size:14px; letter-spacing:.14em; color:var(--gold); }
+  #registerOverlay .rhead{ font-family:var(--serif); font-weight:600; font-size:clamp(32px,5vw,50px); line-height:1.25; margin-top:14px; color:var(--ink); }
+  #registerOverlay .rlede{ font-family:var(--serif); font-weight:600; font-size:clamp(18px,2.3vw,23px); color:var(--soft); margin-top:16px; line-height:1.5; }
+  #registerOverlay .rlede .d{ color:var(--gold); margin:0 8px; }
+  #registerOverlay .formslot{ margin-top:36px; }
+  #registerOverlay .formslot .slotnote{ border:1px dashed var(--line); background:var(--paper); padding:40px 28px; text-align:center; color:var(--soft); font-size:13px; letter-spacing:.02em; line-height:1.8; }
+  @media(prefers-reduced-motion:reduce){ #registerOverlay{ transition:none !important; } }
+  @media(max-width:760px){ .register-open #site{ transform:none; } #registerOverlay .rbar-in{ padding:0 20px; min-height:54px; } #registerOverlay .rwrap{ padding:34px 22px 72px; } }
+</style>
 </head>
 <body>
 
 <div id="site">
 <div class="topbar"></div>
 <nav><div class="wrap">
-  <div class="navbrand"><span class="navqi">QI</span><span class="navmark">Quintessence</span></div>
+  <div class="navbrand"><span class="navqi">QI</span><span class="navcn">坤泰</span><span class="navmark">Quintessence</span></div>
   <div class="navlinks">
     <a class="navurl hide-sm" href="https://qiadmissions.com">qiadmissions.com</a>
     <a class="navlink" href="#method" data-method>方法</a>
-    <a class="navcta" href="#rsvp">预约名额</a>
-    <a class="navlink hide-sm" href="#contact">联系</a><span class="navlang"><a href="/grace">EN</a><span class="lsep">·</span><a href="/grace-zh" class="on">中文</a></span>
+    <a class="navcta" href="#rsvp" data-register>预约名额</a>
+    <a class="navlink hide-sm" href="#contact">联系</a>
+    <span class="langtoggle" role="group" aria-label="语言 Language"><a class="lang" href="index-grace.html">EN</a><span class="langsep"></span><a class="lang zh active" aria-current="page">中文</a></span>
   </div>
 </div></nav>
 
@@ -253,6 +285,7 @@
   <div class="heromain">
     <div class="heroinner">
     <div class="eyebrow">私人大学升学与申请顾问</div>
+    <div class="brandcn">坤泰</div>
     <div class="brandhero">Quintessence</div>
     <p class="defn"><span class="en">quin·tes·sence</span> ——<b>第五元素</b>，万物中最纯粹的精华；一个人最真实本质的呈现。</p>
     <p class="herosub">我们是一家专注的自有升学顾问团队，以策略性的方法应对申请 ——<b>让成果源于精心的设计。</b>我们帮助您的孩子成为最真实的自己，并赢得心仪大学的录取。</p>
@@ -297,18 +330,18 @@
     <div class="it"><b>02</b> 驱动录取的深层动因</div>
     <div class="it"><b>03</b> 策略与真实的罕见统一</div>
     <div class="it"><b>04</b> 让申请者脱颖而出的关键</div>
-    <div class="it"><b>05</b> Quintessence 方法：<br>QI 五阶段体系与文书的艺术</div>
+    <div class="it"><b>05</b> Quintessence 方法：<br>QI 五阶体系与文书的艺术</div>
   </div>
   </div>
   <div class="facts"><span class="fp">7月12日（周日）</span> <span class="d">·</span> <span class="fp">晚 8:00 美东时间</span> <span class="d">·</span> <span class="fp">Zoom 线上直播</span> <span class="d">·</span> <span class="fp">公益</span></div>
-  <div class="row"><a class="btn btn-light" href="#rsvp">预约名额 →</a></div>
+  <div class="row"><a class="btn btn-light" href="#rsvp" data-register>预约名额 →</a></div>
 </div></section>
 
 <!-- OUR APPROACH -->
 <section class="method" id="method"><div class="wrap">
   <div class="eyebrow">我们的方法</div>
   <div class="h2 serif">清晰的全局、真正的策略，以及一份无可置疑属于他们自己的申请。</div>
-  <p class="intro">出众的成果并非仅凭偶然或运气，而是源于用心、有序且富有策略的申请之道。在 Quintessence，我们运用<b>QI 五阶段体系</b>—— 一套可靠的流程，从最开放的阶段依次推进到最终成稿。它以有意为之的策略，取代了申请过程中的焦虑与盲目：<b>让成果源于设计。</b></p>
+  <p class="intro">出众的成果并非源于运气，而是来自<b>QI 五阶体系</b>—— 一套可靠的流程，从最开放的阶段依次推进到最终成稿。它以有意为之的策略，取代了申请过程中的焦虑与盲目：<b>让成果源于设计。</b></p>
   <div class="steps">
     <div class="step">
       <div class="steplabel"><span class="dot" style="background:radial-gradient(circle at 34% 30%,#ffffff,#eef1f4);border:1px solid #bcc4cc;box-shadow:0 0 6px 1px rgba(120,140,165,.45)"></span><span class="lbl"><i class="elem" style="color:#444b54">空</i> <span class="sep2">·</span> <span class="phase">立意</span></span></div>
@@ -351,43 +384,7 @@
   <div class="eyebrow">预约名额</div>
   <div class="h2 serif">预留您的讲座席位。</div>
   <p class="lede">7月12日（周日）· 晚 8:00 美东时间 · Zoom 线上直播。请告诉我们将链接发送至何处。</p>
-  <form action="https://api.web3forms.com/submit" method="POST">
-    <input type="hidden" name="access_key" value="74d99fe3-e078-4796-8c93-920b2c6b221d">
-    <input type="hidden" name="subject" value="New Quintessence Seminar RSVP (ZH)">
-    <input type="hidden" name="from_name" value="Quintessence · qiadmissions.com">
-    <input type="hidden" name="redirect" value="https://qiadmissions.com/thanks.html">
-    <input type="checkbox" name="botcheck" style="display:none !important" tabindex="-1" autocomplete="off">
-    <div class="full"><label>您正在预约的讲座 ——</label>
-      <div style="font-family:var(--serif);font-size:19px;color:var(--accent);padding:4px 0 2px;line-height:1.5">大学真正想要什么：为出众申请者打造的策略体系</div><div style="font-size:13px;color:var(--soft);margin-top:4px">7月12日（周日）· 晚 8:00 美东时间 · Zoom 线上直播</div>
-      <label style="display:block;font-size:14px;color:var(--soft);margin-top:10px;letter-spacing:0;font-weight:400"><input type="checkbox" name="addon_consult" value="yes" style="width:auto;height:auto;margin-right:8px">我也希望预约一次私人咨询，尽早开始</label>
-      <label style="display:block;font-size:14px;color:var(--soft);margin-top:6px;letter-spacing:0;font-weight:400"><input type="checkbox" name="addon_aoe" value="yes" style="width:auto;height:auto;margin-right:8px">请将我加入下一期"文书的艺术"课程的候补名单</label>
-    </div>
-    <div><label>家长名字</label><input name="parent_first" required></div>
-    <div><label>家长姓氏</label><input name="parent_last" required></div>
-    <div><label>学生名字</label><input name="student_first"></div>
-    <div><label>学生姓氏</label><input name="student_last"></div>
-    <div><label>电子邮箱</label><input type="email" name="email" required></div>
-    <div><label>电话</label><input name="phone"></div>
-    <div><label>WhatsApp（如不同）</label><input name="whatsapp"></div>
-    <div><label>微信号（选填）</label><input name="wechat"></div>
-    <div class="full"><label>您希望的联系方式</label>
-      <div style="display:flex;flex-wrap:wrap;gap:12px 18px;margin-top:8px">
-        <label style="font-size:14px;color:var(--soft);letter-spacing:0;font-weight:400"><input type="checkbox" name="contact_pref" value="Call" style="width:auto;height:auto;margin-right:7px">电话</label>
-        <label style="font-size:14px;color:var(--soft);letter-spacing:0;font-weight:400"><input type="checkbox" name="contact_pref" value="Text" style="width:auto;height:auto;margin-right:7px">短信</label>
-        <label style="font-size:14px;color:var(--soft);letter-spacing:0;font-weight:400"><input type="checkbox" name="contact_pref" value="WhatsApp" style="width:auto;height:auto;margin-right:7px">WhatsApp</label>
-        <label style="font-size:14px;color:var(--soft);letter-spacing:0;font-weight:400"><input type="checkbox" name="contact_pref" value="WeChat" style="width:auto;height:auto;margin-right:7px">微信</label>
-        <label style="font-size:14px;color:var(--soft);letter-spacing:0;font-weight:400"><input type="checkbox" name="contact_pref" value="Email" style="width:auto;height:auto;margin-right:7px">邮箱</label>
-      </div></div>
-    <div><label>学生今秋（2026–27 学年）的年级</label>
-      <select name="status"><option value="">请选择…</option><option>9 年级</option><option>10 年级</option><option>11 年级</option><option>12 年级</option><option>大学转学申请者</option><option>已毕业／间隔年</option><option>更低年级（8 年级及以下）</option></select></div>
-    <div><label>学生就读高中</label><input name="high_school" list="hs" autocomplete="off">
-      <datalist id="hs"><option>Herricks High School</option><option>Roslyn High School</option><option>Great Neck South</option><option>Great Neck North</option><option>Jericho High School</option><option>Syosset High School</option><option>Manhasset High School</option><option>Paul D. Schreiber (Port Washington)</option><option>Stuyvesant High School</option><option>Bronx High School of Science</option><option>Hunter College High School</option><option>Horace Mann School</option><option>Trinity School</option><option>The Dalton School</option><option>Ramaz School</option><option>Wheatley School (East Williston)</option></datalist></div>
-    <div><label>首选语言</label><select name="language"><option>中文</option><option>English</option><option>无偏好</option></select></div>
-    <div><label>您从何处得知我们？</label><select name="referral"><option value="">请选择…</option><option>朋友或家人</option><option>孩子的学校</option><option>现在或过去的客户</option><option>微信群</option><option>GRACE（罗斯林华协）</option><option>网络搜索</option><option>其他</option></select></div>
-    <div class="full"><label>还有什么想让我们了解的吗？（选填）</label><input name="note"></div>
-    <label class="full" style="font-size:14px;color:var(--soft);letter-spacing:0;font-weight:400;display:block"><input type="checkbox" id="consent" name="email_consent" value="yes" style="width:auto;height:auto;margin-right:8px">是的 —— 我愿意接收来自 Quintessence 的邮件：我的 Zoom 链接，以及偶尔的升学洞见。您可随时取消订阅。</label>
-    <button class="full" type="submit">提交</button>
-  </form>
+  <a class="btn btn-dark" href="#registerOverlay" data-register>预约名额</a>
 </div></section>
 
 <!-- CONTACT -->
@@ -410,7 +407,7 @@
   <div class="mbar"><div class="mbar-in">
     <button class="mback" type="button" data-close><span class="chev">←</span><span class="navqi">QI</span><span class="navmark">Quintessence</span></button>
     <div class="mbar-actions">
-      <a class="mreserve" href="#rsvp" data-goto="#rsvp">预约名额</a>
+      <a class="mreserve" href="#rsvp" data-register>预约名额</a>
       <button class="mclose" type="button" data-close aria-label="关闭">×</button>
     </div>
   </div></div>
@@ -485,13 +482,67 @@
   </article>
 
   <div class="endcta">
-    <a class="btn" href="#rsvp" data-goto="#rsvp">报名参加公益讲座 →</a>
+    <a class="btn" href="#rsvp" data-register>报名参加公益讲座 →</a>
     <a class="backlink" href="#" data-close>← 返回 Quintessence</a>
   </div>
 </div>
 
+<!-- Register — seamless in-page panel (Chinese); QI Central embeds the Web3Forms <form> into .formslot -->
+<div id="registerOverlay" role="dialog" aria-label="预约名额" tabindex="-1">
+  <div class="rtop"></div>
+  <div class="rbar"><div class="rbar-in">
+    <button class="rback" type="button" data-rclose><span class="chev">←</span><span class="navqi">QI</span><span class="navmark">Quintessence</span></button>
+    <button class="rclose" type="button" data-rclose aria-label="关闭">×</button>
+  </div></div>
+  <div class="rwrap">
+    <div class="eyebrow">公益晚间讲座</div>
+    <h2 class="rhead">预约名额</h2>
+    <p class="rlede">7月8日（周日）<span class="d">·</span> 晚 8:00 美东时间 <span class="d">·</span> Zoom 线上直播 <span class="d">·</span> 公益</p>
+    <div class="formslot" data-formslot aria-label="讲座报名表">
+      <!-- QI CENTRAL: embed the Web3Forms <form> here (byte-identical). -->
+      <form action="https://api.web3forms.com/submit" method="POST">
+    <input type="hidden" name="access_key" value="74d99fe3-e078-4796-8c93-920b2c6b221d">
+    <input type="hidden" name="subject" value="New Quintessence Seminar RSVP (ZH)">
+    <input type="hidden" name="from_name" value="Quintessence · qiadmissions.com">
+    <input type="hidden" name="redirect" value="https://qiadmissions.com/thanks.html">
+    <input type="checkbox" name="botcheck" style="display:none !important" tabindex="-1" autocomplete="off">
+    <div class="full"><label>您正在预约的讲座 ——</label>
+      <div style="font-family:var(--serif);font-size:19px;color:var(--accent);padding:4px 0 2px;line-height:1.5">大学真正想要什么：为出众申请者打造的策略体系</div><div style="font-size:13px;color:var(--soft);margin-top:4px">7月12日（周日）· 晚 8:00 美东时间 · Zoom 线上直播</div>
+      <label style="display:block;font-size:14px;color:var(--soft);margin-top:10px;letter-spacing:0;font-weight:400"><input type="checkbox" name="addon_consult" value="yes" style="width:auto;height:auto;margin-right:8px">我也希望预约一次私人咨询，尽早开始</label>
+      <label style="display:block;font-size:14px;color:var(--soft);margin-top:6px;letter-spacing:0;font-weight:400"><input type="checkbox" name="addon_aoe" value="yes" style="width:auto;height:auto;margin-right:8px">请将我加入下一期"文书的艺术"课程的候补名单</label>
+    </div>
+    <div><label>家长名字</label><input name="parent_first" required></div>
+    <div><label>家长姓氏</label><input name="parent_last" required></div>
+    <div><label>学生名字</label><input name="student_first"></div>
+    <div><label>学生姓氏</label><input name="student_last"></div>
+    <div><label>电子邮箱</label><input type="email" name="email" required></div>
+    <div><label>电话</label><input name="phone"></div>
+    <div><label>WhatsApp（如不同）</label><input name="whatsapp"></div>
+    <div><label>微信号（选填）</label><input name="wechat"></div>
+    <div class="full"><label>您希望的联系方式</label>
+      <div style="display:flex;flex-wrap:wrap;gap:12px 18px;margin-top:8px">
+        <label style="font-size:14px;color:var(--soft);letter-spacing:0;font-weight:400"><input type="checkbox" name="contact_pref" value="Call" style="width:auto;height:auto;margin-right:7px">电话</label>
+        <label style="font-size:14px;color:var(--soft);letter-spacing:0;font-weight:400"><input type="checkbox" name="contact_pref" value="Text" style="width:auto;height:auto;margin-right:7px">短信</label>
+        <label style="font-size:14px;color:var(--soft);letter-spacing:0;font-weight:400"><input type="checkbox" name="contact_pref" value="WhatsApp" style="width:auto;height:auto;margin-right:7px">WhatsApp</label>
+        <label style="font-size:14px;color:var(--soft);letter-spacing:0;font-weight:400"><input type="checkbox" name="contact_pref" value="WeChat" style="width:auto;height:auto;margin-right:7px">微信</label>
+        <label style="font-size:14px;color:var(--soft);letter-spacing:0;font-weight:400"><input type="checkbox" name="contact_pref" value="Email" style="width:auto;height:auto;margin-right:7px">邮箱</label>
+      </div></div>
+    <div><label>学生今秋（2026–27 学年）的年级</label>
+      <select name="status"><option value="">请选择…</option><option>9 年级</option><option>10 年级</option><option>11 年级</option><option>12 年级</option><option>大学转学申请者</option><option>已毕业／间隔年</option><option>更低年级（8 年级及以下）</option></select></div>
+    <div><label>学生就读高中</label><input name="high_school" list="hs" autocomplete="off">
+      <datalist id="hs"><option>Herricks High School</option><option>Roslyn High School</option><option>Great Neck South</option><option>Great Neck North</option><option>Jericho High School</option><option>Syosset High School</option><option>Manhasset High School</option><option>Paul D. Schreiber (Port Washington)</option><option>Stuyvesant High School</option><option>Bronx High School of Science</option><option>Hunter College High School</option><option>Horace Mann School</option><option>Trinity School</option><option>The Dalton School</option><option>Ramaz School</option><option>Wheatley School (East Williston)</option></datalist></div>
+    <div><label>首选语言</label><select name="language"><option>中文</option><option>English</option><option>无偏好</option></select></div>
+    <div><label>您从何处得知我们？</label><select name="referral"><option value="">请选择…</option><option>朋友或家人</option><option>孩子的学校</option><option>现在或过去的客户</option><option>微信群</option><option>GRACE（罗斯林华协）</option><option>网络搜索</option><option>其他</option></select></div>
+    <div class="full"><label>还有什么想让我们了解的吗？（选填）</label><input name="note"></div>
+    <label class="full" style="font-size:14px;color:var(--soft);letter-spacing:0;font-weight:400;display:block"><input type="checkbox" id="consent" name="email_consent" value="yes" style="width:auto;height:auto;margin-right:8px">是的 —— 我愿意接收来自 Quintessence 的邮件：我的 Zoom 链接，以及偶尔的升学洞见。您可随时取消订阅。</label>
+    <button class="full" type="submit">提交</button>
+  </form>
+    </div>
+  </div>
+</div>
+
 <script>
-  (function(){ var f=document.querySelector('.rsvp form'); if(!f) return; var c=document.getElementById('consent'); var done=false;
+  (function(){ var f=document.querySelector('.formslot form'); if(!f) return; var c=document.getElementById('consent'); var done=false;
     f.addEventListener('input', function(){ if(!done && c){ c.checked=true; done=true; } }); })();
   (function(){ var t=document.getElementById('crestTrack'); if(t){ t.innerHTML += t.innerHTML; } })();
   (function(){
@@ -500,7 +551,7 @@
     function smoothTo(y,dur){ var s=window.pageYOffset, d=y-s, st=null; if(Math.abs(d)<2) return; dur=dur||720; requestAnimationFrame(function f(ts){ if(st===null)st=ts; var p=Math.min((ts-st)/dur,1); window.scrollTo(0, s+d*ease(p)); if(p<1) requestAnimationFrame(f); }); }
     document.querySelectorAll('#site a[href^="#"]').forEach(function(a){
       var h=a.getAttribute('href'); if(!h || h.length<2) return;
-      if(a.hasAttribute('data-method')||a.hasAttribute('data-goto')||a.hasAttribute('data-close')) return;
+      if(a.hasAttribute('data-method')||a.hasAttribute('data-goto')||a.hasAttribute('data-close')||a.hasAttribute('data-register')) return;
       a.addEventListener('click',function(e){ var el=document.getElementById(h.slice(1)); if(!el) return; e.preventDefault(); var navH=document.querySelector('nav').getBoundingClientRect().height; var y=el.getBoundingClientRect().top+window.pageYOffset-navH; if(reduce){ window.scrollTo(0,y); } else { smoothTo(y,720); } });
     });
   })();
@@ -517,6 +568,18 @@
     overlay.querySelectorAll('[data-goto]').forEach(function(a){ a.addEventListener('click',function(e){ e.preventDefault(); goTo(a.getAttribute('data-goto')); }); });
     window.addEventListener('popstate',function(){ if(isOpen){ closeMethod(true); } });
     document.addEventListener('keydown',function(e){ if((e.key==='Escape'||e.key==='Esc') && isOpen){ closeMethod(); } });
+  /* ===== Register — seamless in-page panel ===== */
+  (function(){
+    var ov=document.getElementById('registerOverlay'); if(!ov) return;
+    var root=document.documentElement, open=false;
+    function hide(){ if(!open){ ov.style.display='none'; } }
+    function onEnd(e){ if(e.target!==ov||e.propertyName!=='transform') return; ov.removeEventListener('transitionend',onEnd); hide(); }
+    function openReg(){ if(open) return; open=true; ov.removeEventListener('transitionend',onEnd); ov.style.display='block'; ov.scrollTop=0; document.body.style.overflow='hidden'; requestAnimationFrame(function(){ requestAnimationFrame(function(){ root.classList.add('register-open'); }); }); try{ history.pushState({qr:1},''); }catch(e){} try{ ov.focus({preventScroll:true}); }catch(e){} }
+    function closeReg(fromPop){ if(!open) return; open=false; root.classList.remove('register-open'); document.body.style.overflow=''; ov.addEventListener('transitionend',onEnd); setTimeout(hide,640); if(!fromPop && history.state && history.state.qr){ try{ history.back(); }catch(e){} } }
+    document.querySelectorAll('[data-register]').forEach(function(a){ a.addEventListener('click',function(e){ e.preventDefault(); openReg(); }); });
+    ov.querySelectorAll('[data-rclose]').forEach(function(a){ a.addEventListener('click',function(e){ e.preventDefault(); closeReg(); }); });
+    window.addEventListener('popstate',function(){ if(open){ closeReg(true); } });
+    document.addEventListener('keydown',function(e){ if((e.key==='Escape'||e.key==='Esc') && open){ closeReg(); } });
   })();
 </script>
 </body>
